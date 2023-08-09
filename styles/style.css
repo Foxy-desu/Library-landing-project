@@ -7,13 +7,14 @@
     margin: 0;
     padding: 0;
 }
-
-/* header start */
-
 .wrapper {
     max-width: 1440px;
     margin: 0 auto;
 }
+/* header start */
+
+
+
 
 .header-wrapper {
     display:flex;
@@ -71,3 +72,161 @@ ul {
 }
 
 /* header end */
+/* intro start */
+
+.intro__bg {
+    min-height: 100%;
+    position: relative;
+    max-width: 100%;
+    height: 600px;
+    background: url(../images/Welcome.jpg) no-repeat, center;
+    background-size: cover;
+    margin-bottom: 20px;
+}
+
+.intro__welcome-wrapper {
+    position: absolute;
+    width: 600px;
+    height: 220px;
+    padding: 35px 40px;
+    background-color: #0C0C0E;
+    margin: 220px auto 160px 0;
+}
+
+.intro__welcome-text {
+    color: #FFF;
+    text-align: center;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 125% */
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+/* intro end */
+
+/* about start */
+.about-wrapper {
+    display: block;
+    max-width: 100%;
+    height: 837px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.section-title {
+    position: relative;
+    text-align: center;
+    color: #0C0C0E;
+    font-family: Forum;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 100% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    margin-bottom: 61px;
+}
+
+.section-title::after {
+    display: block;
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 50px;
+    height: 1px;
+    background-color: #0C0C0E;
+
+}
+
+.about__desc{
+    text-align: center;
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; 
+    margin-bottom: 20px;
+}
+
+.about__carousel {
+    position: relative;
+    display: block;
+    overflow: hidden;
+    max-width: calc((450px * 3) + (25px * 2));
+    height: calc(675px - 20px);
+    /* background-color: #BB945F; */
+}
+
+.about__carousel-images {
+    position: absolute;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    height: 560px ;
+    width: auto;
+    gap: 25px;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+}
+
+.about__carousel-img-container {
+    height: 560px;
+    width: 450px;
+}
+
+.image-1 {
+    background: url(../images/image\ 1.jpg), lightgray 50% / cover no-repeat;
+}
+.image-2 {
+    background: url(../images/image\ 2.jpg), lightgray 50% / cover no-repeat;
+}
+.image-3 {
+    background: url(../images/image\ 3.jpg), lightgray 50% / cover no-repeat;
+}
+.image-4 {
+    background: url(../images/image\ 4.jpg), lightgray 50% / cover no-repeat;
+}
+
+.image-5 {
+    background: url(../images/image\ 5.jpg), lightgray 50% / cover no-repeat;
+}
+
+.carousel-pagination {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: repeat(3, 16px);
+    column-gap: 10px;
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
+    width: 68px;
+    height: 16px;
+
+}
+
+.carousel-pagination-element {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.carousel-pagination-element:first-child {
+    background-color: #BB945F;
+}
+
+
+
+
+
+
+/* about end */
