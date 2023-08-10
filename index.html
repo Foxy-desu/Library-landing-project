@@ -75,16 +75,128 @@
                         <div class="about__carousel-img-container image-5"></div>
                     </div>
                     <div class="carousel-pagination">
-                        <span class="carousel-pagination-element"></span>
-                        <span class="carousel-pagination-element"></span>
-                        <span class="carousel-pagination-element"></span>
+                        <div class="pagination-element-wrap">
+                            <span class="carousel-pagination-element" current="true"></span>
+                        </div>
+                        <div class="pagination-element-wrap">
+                            <span class="carousel-pagination-element"></span>
+                        </div>
+                        <div class="pagination-element-wrap">
+                            <span class="carousel-pagination-element"></span>
+                        </div>
                     </div>
 
                 </div>
             </div>
         </div>
     </section>
-    <!--about section start-->
+    <!--about section end-->
+    <!--favorites section start-->
+        <section class="favorites">
+            <div class="wrapper">
+                <div class="favorites-wrapper">
+                    <h2 class="favorites__title section-title">Favorites</h2>
+                    <form action="" class="form-season">
+                        <fieldset class="form-season__caption">
+                            <h3 class="form-season__title">Pick favorites of season</h3>
+                            <p class="form-season__inputs">
+                                <label for="radio-winter">
+                                    <input id="radio-winter" type="radio" class="form-season__radio" name="season-favorites" checked><span>Winter</span>
+                                </label>
+                                <label for="radio-spring">
+                                    <input id="radio-spring" type="radio" class="form-season__radio" name="season-favorites"><span>Spring</span>
+                                </label>
+                                <label for="radio-summer">
+                                    <input id="radio-summer" type="radio" class="form-season__radio" name="season-favorites"><span>Summer</span>
+                                </label>
+                                <label for="radio-autumn">
+                                    <input id="radio-autumn" type="radio" class="form-season__radio" name="season-favorites"><span>Autumn</span>
+                                </label>
+                            </p>
+                        </fieldset>
+                    </form> 
+                    <div class="favorites__books">
+                        <!--The book eaters-->
+                        <div class="books__book-caption">
+                            <div class="book-caption__wrap">
+                                <aside class="staff-picks">
+                                    <p class="aside-title">Staff Picks</p>
+                                </aside>
+                                <article class="books__book-info">
+                                    <h3 class="book-info__book-title">The Book Eaters</h3>
+                                    <span class="book-info__author">By</span>
+                                    <address class="book-info__author">Sunyi Dean</address>
+                                    <p class="book-info__book-desc">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
+                                    <button class="book-info__buy-button">Buy</button>
+                                </article>
+                            </div>
+                            <div class="book-caption__image-wrap">
+                                <img class="book-caption__book-image" src="./images/the-book-eaters.jpg" alt="The Book Eaters
+                                By Sunyi Dean">
+                            </div>
+                        </div>
+                        <!--Cackle-->
+                        <div class="books__book-caption">
+                            <div class="book-caption__wrap">
+                                <aside class="staff-picks">
+                                    <p class="aside-title">Staff Picks</p>
+                                </aside>
+                                <article class="books__book-info">
+                                    <h3 class="book-info__book-title">Cackle</h3>
+                                    <span class="book-info__author">By</span>
+                                    <address class="book-info__author">Rachel Harrison</address>
+                                    <p class="book-info__book-desc">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
+                                    <button class="book-info__buy-button">Buy</button>
+                                </article>
+                            </div>
+                            <div class="book-caption__image-wrap">
+                                <img class="book-caption__book-image" src="./images/cackle.jpg" alt="Cackle
+                                By Rachel Harrison">
+                            </div>
+                        </div>
+                        <!--Dante-->
+                        <div class="books__book-caption">
+                            <div class="book-caption__wrap">
+                                <aside class="staff-picks">
+                                    <p class="aside-title">Staff Picks</p>
+                                </aside>
+                                <article class="books__book-info">
+                                    <h3 class="book-info__book-title">Dante: Poet of the Secular World</h3>
+                                    <span class="book-info__author">By</span>
+                                    <address class="book-info__author">Erich Auerbach</address>
+                                    <p class="book-info__book-desc">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
+                                    <button class="book-info__buy-button">Buy</button>
+                                </article>
+                            </div>
+                            <div class="book-caption__image-wrap">
+                                <img class="book-caption__book-image" src="./images/dante.jpg" alt="Dante: Poet of the Secular World
+                                By Erich Auerbach">
+                            </div>
+                        </div>
+                        <!-- The last queen -->
+                        <div class="books__book-caption">
+                            <div class="book-caption__wrap">
+                                <aside class="staff-picks">
+                                    <p class="aside-title">Staff Picks</p>
+                                </aside>
+                                <article class="books__book-info">
+                                    <h3 class="book-info__book-title">The Last Queen</h3>
+                                    <span class="book-info__author">By</span>
+                                    <address class="book-info__author">Clive Irving</address>
+                                    <p class="book-info__book-desc">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
+                                    <button class="book-info__buy-button" isOwn="true">Own</button>
+                                </article>
+                            </div>
+                            <div class="book-caption__image-wrap">
+                                <img class="book-caption__book-image" src="./images/the last queen.jpg" alt="The Last Queen
+                                By Clive Irving">
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+        </section>
+    <!--favorites section end-->
    </main>
    <footer></footer>
 
