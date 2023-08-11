@@ -659,7 +659,7 @@ tbody td, tbody th {
 .library-cards__wrapper {
     display: block;
     max-width: 100%;
-    height: 555px;
+    height: auto;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -669,5 +669,146 @@ tbody td, tbody th {
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
+    padding-bottom: 40px;
 }
+.library-cards__form-title {
+    color: #000;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-bottom: 30px;
+}
+.library-cards__form-wrap {
+    padding: 20px 20px 30px 20px;
+    border: 3px solid #BB945F;
+    background: #FFF;
+    width: 600px;
+    height: 386px;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.library-cards__card {
+    width: 100%;
+    height: 272px;
+    background-color: #BB945F;
+    padding: 20px;
+    
+}
+
+fieldset.library-cards__card-search-form {
+    border: none;
+    color: #000;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+    margin-bottom: 20px;
+}
+
+.card-form__text-input {
+    width: 100%;
+    height: 60px;
+    font-size: 30px;
+    padding-top: 0px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #FFF;
+    padding-left: 20px;
+}
+
+.card-form__text-input::placeholder {
+   
+    padding-left: 0px;
+    color: #8E8E8E;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 50px; /* 166.667% */
+    letter-spacing: 0.6px;
+}
+
+.card-form__text-input:focus-visible {
+    outline-color: #BB945F;
+}
+
+.card-form__text-input:nth-of-type(1) {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+.card-form__text-input:nth-of-type(2) {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.card-form__submit-button {
+    position: relative;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 40px;
+    background-color: #FFF;
+    color: #0C0C0E;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1px;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    transition: .2s all;
+}
+.card-form__submit-button:hover, .card-form__submit-button:focus {
+    background-color: #BB945F;
+    border: 1px solid #BB945F;
+
+}
+
+.library-cards__reader-card-info-title {
+    color: #000;
+    text-align: right;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    margin-bottom: 33px;
+}
+.library-cards__reader-card-info {
+    width: 456px;
+    color: #000;
+    text-align: right;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 0.4px;
+    margin-bottom: 35px;
+}
+.library-cards__account-buttons {
+    display: flex;
+    justify-content: end;
+    column-gap: 20px;
+
+}
+.library-cards__account-button {
+    padding: 10px 40px;
+    background-color: #FFF;
+    border-radius: 2px;
+    border: 1px solid #0C0C0E;
+    transition: .2s all;
+}
+
+.library-cards__account-button:hover, .library-cards__account-button:focus {
+    background-color: #BB945F;
+    border: 1px solid #BB945F;
+}
+
 /* library cards end */
