@@ -117,7 +117,6 @@
                     </form> 
                     <div class="favorites__books">
                         <!--The book eaters-->
-                        <div class="books__book-caption">
                             <div class="book-caption__wrap">
                                 <aside class="staff-picks">
                                     <p class="aside-title">Staff Picks</p>
@@ -129,14 +128,12 @@
                                     <p class="book-info__book-desc">An unusual sci-fi story about a book eater woman who tries desperately to save her dangerous mind-eater son from tradition and certain death. Complete with dysfunctional family values, light Sapphic romance, and a strong, complex protagonist. Not for the faint of heart.</p>
                                     <button class="book-info__buy-button">Buy</button>
                                 </article>
+                                <div class="book-caption__image-wrap">
+                                    <img class="book-caption__book-image" src="./images/the-book-eaters.jpg" alt="The Book Eaters
+                                    By Sunyi Dean">
+                                </div>
                             </div>
-                            <div class="book-caption__image-wrap">
-                                <img class="book-caption__book-image" src="./images/the-book-eaters.jpg" alt="The Book Eaters
-                                By Sunyi Dean">
-                            </div>
-                        </div>
                         <!--Cackle-->
-                        <div class="books__book-caption">
                             <div class="book-caption__wrap">
                                 <aside class="staff-picks">
                                     <p class="aside-title">Staff Picks</p>
@@ -148,14 +145,12 @@
                                     <p class="book-info__book-desc">Are your Halloween movies of choice The Witches of Eastwick and Practical Magic? Look no further than here - where a woman recovering from a breakup moves to a quaint town in upstate New York and befriends a beautiful witch.</p>
                                     <button class="book-info__buy-button">Buy</button>
                                 </article>
+                                <div class="book-caption__image-wrap">
+                                    <img class="book-caption__book-image" src="./images/cackle.jpg" alt="Cackle
+                                    By Rachel Harrison">
+                                </div>
                             </div>
-                            <div class="book-caption__image-wrap">
-                                <img class="book-caption__book-image" src="./images/cackle.jpg" alt="Cackle
-                                By Rachel Harrison">
-                            </div>
-                        </div>
                         <!--Dante-->
-                        <div class="books__book-caption">
                             <div class="book-caption__wrap">
                                 <aside class="staff-picks">
                                     <p class="aside-title">Staff Picks</p>
@@ -167,14 +162,12 @@
                                     <p class="book-info__book-desc">Auerbach's engaging book places the 'Comedy' within the tradition of epic, tragedy, and philosophy in general, arguing for Dante's uniqueness as one who raised the individual and his drama of soul into something of divine significance—an inspired introduction to Dante's main themes.</p>
                                     <button class="book-info__buy-button">Buy</button>
                                 </article>
+                                <div class="book-caption__image-wrap">
+                                    <img class="book-caption__book-image" src="./images/dante.jpg" alt="Dante: Poet of the Secular World
+                                    By Erich Auerbach">
+                                </div>
                             </div>
-                            <div class="book-caption__image-wrap">
-                                <img class="book-caption__book-image" src="./images/dante.jpg" alt="Dante: Poet of the Secular World
-                                By Erich Auerbach">
-                            </div>
-                        </div>
                         <!-- The last queen -->
-                        <div class="books__book-caption">
                             <div class="book-caption__wrap">
                                 <aside class="staff-picks">
                                     <p class="aside-title">Staff Picks</p>
@@ -184,14 +177,13 @@
                                     <span class="book-info__author">By</span>
                                     <address class="book-info__author">Clive Irving</address>
                                     <p class="book-info__book-desc">A timely and revelatory new biography of Queen Elizabeth (and her family) exploring how the Windsors have evolved and thrived as the modern world has changed around them.</p>
-                                    <button class="book-info__buy-button" isOwn="true" disabled>Own</button>
+                                    <button class="book-info__buy-button" data-isOwn="true" disabled>Own</button>
                                 </article>
+                                <div class="book-caption__image-wrap">
+                                    <img class="book-caption__book-image" src="./images/the last queen.jpg" alt="The Last Queen
+                                    By Clive Irving">
+                                </div>
                             </div>
-                            <div class="book-caption__image-wrap">
-                                <img class="book-caption__book-image" src="./images/the last queen.jpg" alt="The Last Queen
-                                By Clive Irving">
-                            </div>
-                        </div>
                     </div>   
                 </div>
             </div>
@@ -318,6 +310,38 @@
         </div>
     </section>
     <!-- our contacts end -->
+    <!-- digital library cards section start -->
+    <section class="library-cards-section">
+        <div class="wrapper">
+            <div class="library-cards__wrapper">
+                <h2 class="library-cards__title section-title">Digital Library Cards</h2>
+                <div class="library-cards__card-info-wrapper">
+                    <div class="library-cards__card-wrapper">
+                        <h3 class="library-cards__form-title">Find your Library card</h3>
+                        <form name="library-card-search" class="library-cards__card">
+                            <fieldset>
+                                <legend class="card-form__form-title">Brooklyn Public Library</legend>
+                                <input placeholder="Reader's name" type="text" class="card-form__text-input">
+                                <input placeholder="Card number" type="text" class="card-form__text-input">
+                                <button type="submit">Check the card</button>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="library-cards__reader-card-wrapper">
+                        <h3 class="library-cards__reader-card-info-title">Get a reader card</h3>
+                        <p class="library-cards__reader-card-info">You will be able to see a reader card after logging into account or you can register a new account</p>
+                        <div class="library-cards__account-buttons">
+                            <button class="library-cards__account-button sign-up-button"></button>
+
+                            <button class="library-cards__account-button log-in-button">Log in</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- digital library cards section end -->
 
 
    </main>
