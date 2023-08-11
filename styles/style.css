@@ -570,5 +570,79 @@ tbody td, tbody th {
     text-align: right;
     box-sizing: content-box;
     padding-left: 60px;
+}
 
 /* coffee shop end */
+
+/* contacts start */
+.contacts-wrapper {
+    display: block;
+    max-width: 100%;
+    height: 555px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 20px;
+}
+.contacts__info-wrap {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+    width: 100%;
+    height: 414px;
+}
+.contacts__contact-info {
+    flex-basis: 503px;
+    height: 100%;
+}
+.contacts__contact-info a {
+    color: #BB945F;
+}
+
+.title {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.contact-info__title {
+    padding-bottom: 40px;
+}
+.text {
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px; /* 200% */
+    letter-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.text span {
+    display: inline-block;
+    margin-bottom: 20px;
+}
+.contact-info__senior {
+    margin-bottom: 20px;
+}
+.text strong {
+    font-weight: 700;
+}
+
+
+.contacts__map-wrap {
+    overflow: hidden;
+    flex-basis: 50%;
+    height: 100%;
+
+}
+
+
+
+
+/* contacts end */
