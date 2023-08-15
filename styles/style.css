@@ -236,7 +236,7 @@ ul {
     justify-self: center;
 }
 
-.carousel-pagination-element[current="true"] {
+.carousel-pagination-element[data-current="true"] {
     background-color: #BB945F;
 }
 
@@ -257,6 +257,8 @@ ul {
     border: none;
     margin-bottom: 35px;
 }
+
+
 .form-season__title {
     color: #000;
     text-align: left;
@@ -284,6 +286,10 @@ ul {
     padding: 5px;
     transition: .2s all;  
 }
+.form-season__inputs label:hover{
+    cursor: pointer;
+}
+
 .form-season__inputs label:first-of-type {
     padding-left: 0px;
 }
@@ -308,6 +314,7 @@ ul {
 }
 .form-season__radio[type="radio"]:hover {
     background-color: #BB945F;
+    cursor: pointer;
 }
 
 
@@ -427,6 +434,7 @@ ul {
     border-radius: 2px;
     border: 1px solid #BB945F;
     background: #BB945F;
+    cursor: pointer;
 }
 
 .book-info__buy-button[data-isOwn="true"] {
@@ -721,7 +729,7 @@ fieldset.library-cards__card-search-form {
 }
 
 .card-form__text-input::placeholder {
-   
+    text-transform: none;
     padding-left: 0px;
     color: #8E8E8E;
     font-family: Forum;
@@ -745,6 +753,10 @@ fieldset.library-cards__card-search-form {
     margin-bottom: 25px;
 }
 
+.card-form__text-input.number-imput {
+    text-transform: uppercase;
+}
+
 .card-form__submit-button {
     position: relative;
     bottom: -30px;
@@ -766,6 +778,7 @@ fieldset.library-cards__card-search-form {
 .card-form__submit-button:hover, .card-form__submit-button:focus {
     background-color: #BB945F;
     border: 1px solid #BB945F;
+    cursor: pointer;
 
 }
 
@@ -809,6 +822,140 @@ fieldset.library-cards__card-search-form {
 .library-cards__account-button:hover, .library-cards__account-button:focus {
     background-color: #BB945F;
     border: 1px solid #BB945F;
+    cursor: pointer;
 }
 
 /* library cards end */
+/* Footer start */
+
+footer {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px
+}
+
+.footer-wrapper {
+    background-color: #0C0C0E;
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.footer__business-information {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    column-gap: 15px;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #fff ;
+}
+
+.footer__contact-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__contact-info-text {
+    color: #fff ;
+    text-decoration: none;
+    margin-bottom: 13px;
+
+    transition: .2s all;
+}
+.footer__contact-info-text:hover, .footer__contact-info-text:focus {
+    opacity: .6;
+}
+
+.footer__contact-info-socials {
+    display: flex;
+    flex-direction: row;
+    column-gap: 5px;
+    align-items: start;
+}
+
+.footer__contact-info-socials::marker {
+    display: none;
+}
+
+.footer__socials {
+    display: block;
+    width: 24px;
+    height: 24px;
+    box-sizing: content-box;
+    padding: 5px;
+    transition: .2s all;
+}
+.footer__socials:hover, .footer__socials:focus{
+    opacity: .6;
+    cursor: pointer;
+}
+
+.tweeter {
+    background: url(../images/SVG/u_twitter-alt.svg) no-repeat center;
+    block-size: cover;
+    padding-left: 0px;
+}
+.instagram {
+    background: url(../images/SVG/u_instagram.svg) no-repeat center;
+    block-size: cover;
+}
+.facebook {
+    background: url(../images/SVG/u_facebook-f.svg) no-repeat center;
+    block-size: cover;
+}
+
+.footer__working-hours-text {
+    text-align: end;
+}
+.monday-friday {
+    margin-bottom: 10px;
+}
+
+
+.footer__lesson-provider-info {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    padding: 39px 0 39px 0;
+
+    color: #FFF;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; /* 100% */
+    letter-spacing: 2px;
+}
+.footer__year {
+    padding: 5px 5px 5px 0;
+}
+
+.footer__school-name {
+    position: absolute;
+    padding: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.footer__user-name {
+    padding: 5px 0px 5px 5px;
+}
+
+
+
+.footer-link {
+    color: #fff;
+    text-decoration: none;
+    transition: .2s all;
+}
+
+.footer-link:hover {
+    opacity: .6;
+}
+/* footer end */

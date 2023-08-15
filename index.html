@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brooklin Public Library</title>
-    <link type="icon" href="./book_favicon.ico" sizes="any"> <!-- 32x32-->
-    <link rel="icon" href="./images/SVG/book_favicon.svg" type="image/svg+xml">
+    <link type="image/x-ico" rel="shortcut icon" href="./book_favicon.ico" sizes="any"> <!-- 32x32-->
+    <link rel="shortcut icon" href="./images/SVG/book_favicon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
@@ -21,19 +21,19 @@
                     <nav class="header-menu header-item">
                         <ul class="header-menu__header-list">
                             <li class="header-menu__option">
-                                <a href="!#" class="header-menu__link about-option">About</a>
+                                <a href="#about" class="header-menu__link about-option">About</a>
                             </li>
                             <li class="header-menu__option">
-                                <a href="!#" class="header-menu__link favorites-option">Favorites</a>
+                                <a href="#favorites" class="header-menu__link favorites-option">Favorites</a>
                             </li>
                             <li class="header-menu__option">
-                                <a href="!#" class="header-menu__link cofee-option">Coffee shop</a>
+                                <a href="#coffee-shop" class="header-menu__link cofee-option">Coffee shop</a>
                             </li>
                             <li class="header-menu__option">
-                                <a href="!#" class="header-menu__link contacts-option">Contacts</a>
+                                <a href="#contacts" class="header-menu__link contacts-option">Contacts</a>
                             </li>
                             <li class="header-menu__option">
-                                <a href="!#" class="header-menu__link card-option">Library Card</a>
+                                <a href="#library-card" class="header-menu__link card-option">Library Card</a>
                             </li>
                         </ul>
                     </nav>    
@@ -52,9 +52,9 @@
     <section class="intro">
         <div class="wrapper">
             <div class="intro__bg">
-                <div class="intro__welcome-wrapper">
-                    <p class="intro__welcome-text"> Welcome<br> 
-                        to the Brooklyn<br> Library</p>
+                <div class="intro__welcome-wrapper ">
+                    <h2 class="intro__welcome-text"> Welcome</h2>
+                        <h2 class="intro__welcome-text">to the Brooklyn</h2><h2 class="intro__welcome-text">Library</h2>
                 </div>
             </div>
         </div>
@@ -64,7 +64,7 @@
     <section class="about">
         <div class="wrapper">
             <div class="about-wrapper">
-                <h2 class="about__title section-title">About</h2>
+                <h2 id="about" class="about__title section-title">About</h2>
                 <p class="about__desc">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 <div class="about__carousel">
                     <div class="about__carousel-images">
@@ -76,7 +76,7 @@
                     </div>
                     <div class="carousel-pagination">
                         <div class="pagination-element-wrap">
-                            <span class="carousel-pagination-element" current="true"></span>
+                            <span class="carousel-pagination-element" data-current="true"></span>
                         </div>
                         <div class="pagination-element-wrap">
                             <span class="carousel-pagination-element"></span>
@@ -95,8 +95,8 @@
         <section class="favorites">
             <div class="wrapper">
                 <div class="favorites-wrapper">
-                    <h2 class="favorites__title section-title">Favorites</h2>
-                    <form action="" class="form-season">
+                    <h2 id="favorites" class="favorites__title section-title">Favorites</h2>
+                    <form action="#" class="form-season">
                         <fieldset class="form-season__caption">
                             <h3 class="form-season__title">Pick favorites of season</h3>
                             <p class="form-season__inputs">
@@ -180,7 +180,7 @@
                                     <button class="book-info__buy-button" data-isOwn="true" disabled>Own</button>
                                 </article>
                                 <div class="book-caption__image-wrap">
-                                    <img class="book-caption__book-image" src="./images/the last queen.jpg" alt="The Last Queen
+                                    <img class="book-caption__book-image" src="./images/the-last-queen.jpg" alt="The Last Queen
                                     By Clive Irving">
                                 </div>
                             </div>
@@ -193,12 +193,12 @@
     <section class="coffee-shop">
         <div class="wrapper">
             <div class="coffee-shop-wrapper">
-                <h2 class="coffee-shop__title section-title">Coffee shop</h2>
+                <h2 id="coffee-shop" class="coffee-shop__title section-title">Coffee shop</h2>
                 <p class="coffee-shop__desc"><span class="letter-I">I</span><span>n</span> our library, we have of cozy coffee shop, welcoming in customers with frothy cappuccinos and friendly conversation. 
                     <span class="letter-Y">y</span><span>ou</span> can get a favorite book and read in coffee shop. Our barista to cook you best coffee, and also you can try desserts from bakery.
                 </p>
                 <div class="cofee-shop__prices-wrap">
-                    <article class="coffee-shop__price-list">
+                    <div class="coffee-shop__price-list">
                         <table class="price-list cofee-and-tea">
                             <thead>
                                 <tr>
@@ -238,8 +238,8 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </article>
-                    <article class="coffee-shop__price-list">
+                    </div>
+                    <div class="coffee-shop__price-list">
                         <table class="price-list deserts-and-cakes">
                             <thead>
                                 <tr>
@@ -279,7 +279,7 @@
                                 </tr>
                             </tbody>
                         </table>
-                    </article>
+                    </div>
                 </div>
             </div>
         </div>
@@ -289,7 +289,7 @@
     <section class="contacts">
         <div class="wrapper">
             <div class="contacts-wrapper">
-                <h2 class="contacts__title section-title">Our Contacts</h2>
+                <h2 id="contacts" class="contacts__title section-title">Our Contacts</h2>
                 <div class="contacts__info-wrap">
                     <div class="contacts__contact-info">
                         <p class="contact-info__title title">For all Library inquiries:</p>
@@ -314,7 +314,7 @@
     <section class="library-cards-section">
         <div class="wrapper">
             <div class="library-cards__wrapper">
-                <h2 class="library-cards__title section-title">Digital Library Cards</h2>
+                <h2 id="library-card" class="library-cards__title section-title">Digital Library Cards</h2>
                 <div class="library-cards__card-info-wrapper">
                     <div class="library-cards__card-wrapper">
                         <h3 class="library-cards__form-title">Find your Library card</h3>
@@ -322,8 +322,8 @@
                             <form name="library-card-search" class="library-cards__card">
                                 <fieldset class="library-cards__card-search-form">
                                     <legend class="card-form__form-title">Brooklyn Public Library</legend>
-                                    <input placeholder="Reader's name" type="text" class="card-form__text-input"><br>
-                                    <input placeholder="Card number" type="text" class="card-form__text-input"><br>
+                                    <input name="Reader's name" required placeholder="Reader's name" type="text" pattern="^([A-z]+(-||\s))+$" title="Your name should contain only Latin letters, spaces and dashes if needed" class="card-form__text-input"><br>
+                                    <input name="Card number" required placeholder="Card number" type="text" pattern="[0-9A-z]{9}" title="Your card number should consist of 9 characters (numbers or letters)" class="card-form__text-input number-imput"><br>
                                     <button class="card-form__submit-button" type="submit">Check the card</button>
                                 </fieldset>
                             </form>
@@ -344,11 +344,49 @@
         </div>
     </section>
     <!-- digital library cards section end -->
-
-
    </main>
-   <footer></footer>
-
+   <!-- footer start -->
+   <footer>
+        <div class="wrapper">
+            <div class="footer-wrapper">
+                <div class="footer__business-information">
+                    <div class="footer__contact-info">
+                        <a href="https://goo.gl/maps/MH613k1cWP3z1D6d7" class="footer__contact-info-text">
+                            286 Cadman Plaza, New York,<br> 
+                            NY 11238, United States
+                        </a>
+                        <ul class="footer__contact-info-socials">
+                            <li class="twitter-wrap">
+                                <a  href="#" class="footer__socials tweeter"></a>
+                            </li>
+                            <li class="instagram-wrap">
+                                <a href="#" class="footer__socials instagram"></a>
+                            </li>
+                            <li class="facebook-wrap">
+                                <a href="#" class="footer__socials facebook"></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__working-hours">
+                        <p class="footer__working-hours-text monday-friday">
+                            Mon - Fri<br>
+                            08:00 am - 07:00 pm
+                        </p>
+                        <p class="footer__working-hours-text saturday-sunday">
+                            Sat - Sun<br>
+                            10:00 am - 06:00 pm
+                        </p>
+                    </div>
+                </div>
+                <div class="footer__lesson-provider-info">
+                    <div class="footer__year">2023</div>
+                    <a href="https://rs.school/js-stage0/" class="footer-link"><div class="footer__school-name">The Rolling Scopes School</div></a>
+                    <a  href="#" class="footer-link"><div class="footer__user-name">Aleksandra Orliuk</div></a>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <!-- footer end -->
     <script src="./scripts/index.js"></script>
 </body>
 </html>
