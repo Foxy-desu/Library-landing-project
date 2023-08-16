@@ -40,6 +40,20 @@ img {
     margin: 20px;
 }
 
+.header-profile {
+    display: block;
+    width: 28px;
+    height: 28px;
+    padding: 10px;
+    background: url(../images/SVG/icon_profile.svg) no-repeat center;
+    background-size: cover;
+}
+
+.header-profile:hover {
+    opacity: 0.6;
+    cursor: pointer;
+}
+
 .header-title {
     margin: 20px auto 20px 20px;
 }
@@ -65,6 +79,8 @@ ul {
 }
 
 .header-menu__link {
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: #ffffff;
     text-decoration: none;
     font-family: Inter;
@@ -544,7 +560,7 @@ table {
     width: 100%;
 }
 
-.price-list thead{
+.price-list caption {
     color: #BB945F;
     font-family: Forum;
     font-size: 40px;
@@ -596,7 +612,7 @@ tbody th {
     background-color: #BB945F;
 }
 
-.deserts-and-cakes th{
+.deserts-and-cakes caption {
     text-align: right;
 }
 
@@ -707,11 +723,11 @@ tbody th {
 }
 
 .library-cards__card-info-wrapper#non-authorized {
-    display: grid;
+    display: none;
 }
 
 .library-cards__card-info-wrapper#authorized {
-    display: none;
+    display: grid;
 }
 
 .library-cards__form-title {
@@ -879,9 +895,51 @@ fieldset.library-cards__card-search-form {
     margin-bottom: 25px;
 }
 
-#authorized .card-form__text-input {
+#authorized .card-form__text-output {
+    display: block;
     color: #BB945F;
 } 
+
+#authorized .card-form__text-output {
+    width: 100%;
+    height: 60px;
+    padding-top: 0px;
+    padding-left: 20px;
+    font-size: 30px;
+    border: transparent;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+#authorized .card-form__text-output::placeholder {
+    padding-left: 0px;
+    color: #8E8E8E;
+    font-family: Forum;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: none;
+    line-height: 50px;
+    letter-spacing: 0.6px;
+}
+
+#authorized .card-form__text-output:focus-visible {
+    outline-color: #BB945F;
+}
+
+#authorized .card-form__text-output:nth-of-type(1) {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+#authorized .card-form__text-output:nth-of-type(2) {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+#authorized .card-form__text-output.number-output {
+    text-transform: uppercase;
+}
 
 #authorized .user-stats {
     display: flex;
