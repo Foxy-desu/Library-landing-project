@@ -1,5 +1,5 @@
 /* Fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Forum&family=Inter:wght@400;700&display=swap");
 
 /* Desctop-version */
 html {
@@ -7,9 +7,9 @@ html {
 }
 
 * {
-    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-weight: 400;
 }
 
@@ -30,9 +30,10 @@ img {
     justify-content: end;
     align-items: center;
     width: 100%;
-    height: 90px;
+    height: 90px; 
+    color: #ffffff;
     background-color: #0C0C0E;
-    color: #FFF;
+   
 }
 
 .header-item {
@@ -64,14 +65,14 @@ ul {
 }
 
 .header-menu__link {
-    color: #FFF;
+    color: #ffffff;
     text-decoration: none;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 50px;
-    transition: .2s all;
+    transition: 0.2s all;
 }
 
 .header-menu__link:hover {
@@ -81,13 +82,14 @@ ul {
 /* header end */
 /* intro start */
 .intro__bg {
-    min-height: 100%;
     position: relative;
+    min-height: 100%;
     max-width: 100%;
     height: 600px;
+    margin-bottom: 20px;
     background: url(../images/Welcome.jpg) no-repeat, center;
     background-size: cover;
-    margin-bottom: 20px;
+    
 }
 
 .intro__welcome-wrapper {
@@ -95,24 +97,24 @@ ul {
     width: 600px;
     height: 220px;
     padding: 35px 40px;
-    background-color: #0C0C0E;
     margin: 220px auto 160px 0;
+    background-color: #0C0C0E;
+    
 }
 
 .intro__welcome-text {
-    color: #FFF;
+    color: #ffffff;
     text-align: center;
     font-family: Forum;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: 50px; /* 125% */
+    line-height: 50px; 
     letter-spacing: 3px;
     text-transform: uppercase;
 }
 
 /* intro end */
-
 /* about start */
 .about-wrapper {
     display: block;
@@ -125,50 +127,50 @@ ul {
 
 .section-title {
     position: relative;
+    margin-bottom: 61px;
     text-align: center;
     color: #0C0C0E;
     font-family: Forum;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 100% */
+    line-height: 40px; /
     letter-spacing: 2px;
     text-transform: capitalize;
-    margin-bottom: 61px;
+    
 }
 
 .section-title::after {
-    display: block;
     position: absolute;
     bottom: -20px;
     left: 50%;
     transform: translateX(-50%);
-    content: '';
+    display: block;
     width: 50px;
     height: 1px;
     background-color: #0C0C0E;
-
+    content: "";
 }
 
 .about__desc{
+    margin-bottom: 20px;
     text-align: center;
-    color: #000;
+    color: #000000;
     text-align: center;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px; 
-    margin-bottom: 20px;
+    
 }
 
 .about__carousel {
     position: relative;
-    display: flex;
-    overflow: hidden;
+    display: flex; 
     max-width: calc((450px * 3) + (25px * 2));
     height: calc(675px - 20px);
-    /* background-color: #BB945F; */
+    overflow: hidden;
 }
 
 .about__carousel-images {
@@ -176,12 +178,11 @@ ul {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    height: 560px ;
-    width: auto;
     gap: 25px;
     justify-content: space-between;
+    height: 560px ;
+    width: auto;
     margin-bottom: 40px;
-
 }
 
 .about__carousel-img-container {
@@ -210,35 +211,33 @@ ul {
 }
 
 .carousel-pagination {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    transform: translateX(-50%);
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(3, 26px);
     column-gap: 0px;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    left: 50%;
-    bottom: 40px;
-    transform: translateX(-50%);
     width: 78px;
     height: 26px;
-
 }
 
 .pagination-element-wrap {
     width: 26px;
     height: 26px;
     padding: 5px;
-
 }
 
 .carousel-pagination-element {
     display: inline-block;
+    justify-self: center;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background-color: black;
-    justify-self: center;
+    background-color: #000000; 
 }
 
 .carousel-pagination-element[data-current="true"] {
@@ -257,19 +256,20 @@ ul {
 }
 
 .form-season__caption {
-    border: none;
     margin-bottom: 35px;
+    border: none;
+    
 }
 
 .form-season__title {
+    margin-bottom: 35px;
     color: #000;
     text-align: left;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: normal;
-    margin-bottom: 35px;
+    line-height: normal; 
 }
 
 .form-season__inputs {
@@ -278,7 +278,7 @@ ul {
     grid-template-columns: repeat(4, auto);
     justify-content: start;
     column-gap: 90px;
-    color: #000;
+    color: #000000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -288,7 +288,7 @@ ul {
 
 .form-season__inputs label {
     padding: 5px;
-    transition: .2s all;  
+    transition: 0.2s all;  
 }
 
 .form-season__inputs label:hover{
@@ -304,18 +304,18 @@ ul {
 }
 
 .form-season__radio[type="radio"] {
+    flex-shrink: 0; 
     width: 17px;
     height: 17px;
-    flex-shrink: 0;
-    stroke-width: 2px;
-    stroke: #000;
     margin-right: 20px;
     margin-bottom: 3px;
+    stroke-width: 2px;
+    stroke: #000000;
     vertical-align: middle;
 }
 
 .form-season__radio[type="radio"]:checked {
-    accent-color: #000;
+    accent-color: #000000;
 }
 
 .form-season__radio[type="radio"]:checked ~ span {
@@ -331,14 +331,13 @@ ul {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    /* column-gap: 220px; */
     column-gap: 40px;
     row-gap: 40px;
     justify-content: space-between;
     margin-bottom: 40px;
+    padding-right: 40px;
     width: 100%;
     height: 1150px;
-    padding-right: 40px;
 }
 
 .favorites__books#winter-picks {
@@ -361,51 +360,49 @@ ul {
 }
 
 .book-caption__wrap {
+    position: relative;
     justify-self: start;
-    position: relative;
     height: 555px;
     width: 550px;
     padding: 15px 15px 15px 20px;
     border: 1px solid rgb(61, 61, 61);
-
-
 }
 
-.book-caption__wrap:nth-child(2), .book-caption__wrap:nth-child(4) {
+.book-caption__wrap:nth-child(2), 
+.book-caption__wrap:nth-child(4) {
+    position: relative;
     justify-self: end;
-    position: relative;
     height: 555px;
     width: 550px;
     padding: 15px 15px 15px 20px;
     border: 1px solid rgb(61, 61, 61);
-
-
 }
+
 .aside-title {
     position: relative;
-    color: #000;
+    margin-bottom: 20px;
+    color: #000000;
     font-family: Forum;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 200% */
+    line-height: 40px; 
     letter-spacing: 2px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
+    text-transform: capitalize; 
 }
+
 .aside-title::after {
-    display: block;
-    position: absolute;
+    position: absolute; 
     bottom: 0px;
-    content: '';
+    display: block;
     width: 60px;
     height: 1px;
+    content: "";
     background-color: #BB945F;;
-
 }
 
 .book-info__book-title {
-    color: #000;
+    color: #000000;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
@@ -417,35 +414,34 @@ ul {
 
 .book-info__author {
     display: inline-block;
-    color: #000;
+    margin-bottom: 20px;
+    color: #000000;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
     line-height: 40px;
     letter-spacing: 2px;
-    text-transform: capitalize;
-    margin-bottom: 20px;
+    text-transform: capitalize; 
 }
 
 .book-info__book-desc {
-    color: #000;
     width: 355px;
+    color: #000000;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 266.667% */
+    line-height: 40px;
     letter-spacing: 2px;
     text-transform: capitalize;
-    /* margin-bottom: 10px; */
 }
 
 .book-info__buy-button {
     position: absolute;
     bottom: 15px;
     box-sizing: content-box;
-    background-color: transparent;
+    padding: 9px 27px;
     color: #0C0C0E;
     text-align: center;
     font-family: Inter;
@@ -454,30 +450,30 @@ ul {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
-    padding: 9px 27px;
-    border-radius: 2px;
+    background-color: transparent;
     border: 1px solid #0C0C0E;
+    border-radius: 2px;
 }
 
 .book-info__buy-button:enabled:hover {
-    border-radius: 2px;
-    border: 1px solid #BB945F;
     background: #BB945F;
+    border: 1px solid #BB945F;
+    border-radius: 2px;
     cursor: pointer;
 }
 
 .book-info__buy-button[data-isOwn="true"] {
     color: #BB945F;
-    border-radius: 2px;
     border: 1px solid #BB945F;
+    border-radius: 2px;
 }
 
 .book-caption__image-wrap {
     position: absolute;
-    width: 200px;
-    height: 300px;
     bottom: -2px;
     left: 390px;
+    width: 200px;
+    height: 300px;
 }
 
 /* favorites section end */
@@ -492,8 +488,9 @@ ul {
 }
 
 .coffee-shop__desc {
+    margin-bottom: 40px;
+    color: #000000;
     text-align: center;
-    color: #000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -501,23 +498,22 @@ ul {
     line-height: 40px;
     letter-spacing: 2px;
     text-transform: lowercase;
-    margin-bottom: 40px;
 }
 
 span.letter-I {
-    color: #000;
+    color: #000000;
     text-align: center;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 200% */
+    line-height: 40px; 
     letter-spacing: 2px;
     text-transform: capitalize;
 }
 
 span.letter-Y {
-    color: #000;
+    color: #000000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -546,32 +542,31 @@ span.letter-Y {
 
 table {
     width: 100%;
-    /* border: 1px solid gray; */
 }
 
 .price-list thead{
-    text-align: left;
     color: #BB945F;
     font-family: Forum;
     font-size: 40px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 100% */
+    text-align: left;
+    line-height: 40px; 
     letter-spacing: 2px;
     text-transform: capitalize;
 }
 
-tbody td, tbody th {
+tbody td, 
+tbody th {
     padding-top: 40px;
-    color: #000;
+    color: #000000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 200% */
+    line-height: 40px; 
     letter-spacing: 2px;
     text-transform: capitalize;
-    /* border: 1px solid gray; */ 
 }
 
 .cofee-and-tea th {
@@ -579,26 +574,26 @@ tbody td, tbody th {
 }
 
 .cofee-and-tea tbody tr td:last-child {
+    box-sizing: content-box;
+    width: 21px;
+    padding-left: 60px;
     text-align: right;
     font-family: Forum;
-    width: 21px;
-    box-sizing: content-box;
-    padding-left: 60px;
 }
 
 .cofee-and-tea tbody tr td:nth-child(2) {
     position: relative;
-    text-align: right;
     box-sizing: content-box;
     padding-left: 60px;
+    text-align: right;
 }
 
 .dash {
     display: inline-block;
     width: 100px;
     height: 1px;
-    background-color: #BB945F;
     margin-bottom: 5px;
+    background-color: #BB945F;
 }
 
 .deserts-and-cakes th{
@@ -606,18 +601,18 @@ tbody td, tbody th {
 }
 
 .deserts-and-cakes tbody tr td:last-child {
-    text-align: right;
-    font-family: Forum;
-    width: 31px;
     box-sizing: content-box;
+    width: 31px;
     padding-left: 60px;
+    font-family: Forum;
+    text-align: right;
 }
 
 .deserts-and-cakes tbody tr td:nth-child(2) {
     position: relative;
-    text-align: right;
     box-sizing: content-box;
     padding-left: 60px;
+    text-align: right;
 }
 
 /* coffee shop end */
@@ -649,12 +644,12 @@ tbody td, tbody th {
 }
 
 .title {
-    color: #000;
+    color: #000000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
-    line-height: 40px; /* 200% */
+    line-height: 40px; 
     letter-spacing: 2px;
     text-transform: capitalize;
 }
@@ -664,12 +659,12 @@ tbody td, tbody th {
 }
 
 .text {
-    color: #000;
+    color: #000000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 200% */
+    line-height: 40px; 
     letter-spacing: 2px;
     text-transform: capitalize;
 }
@@ -688,9 +683,9 @@ tbody td, tbody th {
 }
 
 .contacts__map-wrap {
-    overflow: hidden;
     flex-basis: 50%;
     height: 100%;
+    overflow: hidden;
 }
 
 /* contacts end */
@@ -704,10 +699,10 @@ tbody td, tbody th {
 }
 
 .library-cards__card-info-wrapper {
-    width: 100%;
     display: grid;
     grid-auto-flow: column;
     justify-content: space-between;
+    width: 100%;
     padding-bottom: 40px;
 }
 
@@ -720,64 +715,64 @@ tbody td, tbody th {
 }
 
 .library-cards__form-title {
-    color: #000;
+    margin-bottom: 30px;
+    color: #000000;
     font-family: Inter;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.6px;
-    margin-bottom: 30px;
 }
 
 .library-cards__form-wrap {
     padding: 20px 20px 30px 20px;
-    border: 3px solid #BB945F;
-    background: #FFF;
     width: 600px;
     height: 386px;
+    background: #ffffff;
+    border: 3px solid #BB945F;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
 .library-cards__card {
     width: 100%;
     height: 272px;
-    background-color: #BB945F;
     padding: 20px; 
+    background-color: #BB945F;
 }
 
 fieldset.library-cards__card-search-form {
-    border: none;
-    color: #000;
+    margin-bottom: 20px;
+    color: #000000;
     font-family: Forum;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 50px; /* 166.667% */
+    line-height: 50px; 
     letter-spacing: 0.6px;
-    margin-bottom: 20px;
+    border: none;
 }
 
 .card-form__text-input {
     width: 100%;
     height: 60px;
-    font-size: 30px;
     padding-top: 0px;
+    padding-left: 20px;
+    font-size: 30px;
     border: transparent;
     border-radius: 10px;
-    background-color: #FFF;
-    padding-left: 20px;
+    background-color: #ffffff;
 }
 
 .card-form__text-input::placeholder {
-    text-transform: none;
     padding-left: 0px;
     color: #8E8E8E;
     font-family: Forum;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
-    line-height: 50px; /* 166.667% */
+    text-transform: none;
+    line-height: 50px;
     letter-spacing: 0.6px;
 }
 
@@ -805,7 +800,6 @@ fieldset.library-cards__card-search-form {
     left: 50%;
     transform: translateX(-50%);
     padding: 10px 40px;
-    background-color: #FFF;
     color: #0C0C0E;
     font-family: Inter;
     font-size: 20px;
@@ -813,40 +807,42 @@ fieldset.library-cards__card-search-form {
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
-    border-radius: 2px;
+    background-color: #ffffff;
     border: 1px solid #0C0C0E;
-    transition: .2s all;
+    border-radius: 2px;
+    transition: 0.2s all;
 }
 
-.card-form__submit-button:hover, .card-form__submit-button:focus {
+.card-form__submit-button:hover, 
+.card-form__submit-button:focus {
     background-color: #BB945F;
     border: 1px solid #BB945F;
     cursor: pointer;
 }
 
 .library-cards__reader-card-info-title {
+    margin-bottom: 33px;
     color: #000;
-    text-align: right;
     font-family: Forum;
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
+    text-align: right;
     line-height: normal;
     letter-spacing: 0.6px;
-    margin-bottom: 33px;
 }
 
 .library-cards__reader-card-info {
     width: 456px;
-    color: #000;
-    text-align: right;
+    margin-bottom: 35px;
+    color: #000000;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 40px; /* 200% */
+    text-align: right;
+    line-height: 40px; 
     letter-spacing: 0.4px;
-    margin-bottom: 35px;
 }
 .library-cards__account-buttons {
     display: flex;
@@ -856,19 +852,20 @@ fieldset.library-cards__card-search-form {
 
 .library-cards__account-button {
     padding: 10px 40px;
-    background-color: #FFF;
-    border-radius: 2px;
-    border: 1px solid #0C0C0E;
     font-family: Inter;
     font-size: 10px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     letter-spacing: 1px;
-    transition: .2s all;
+    background-color: #ffffff;
+    border: 1px solid #0C0C0E;
+    border-radius: 2px;
+    transition: 0.2s all;
 }
 
-.library-cards__account-button:hover, .library-cards__account-button:focus {
+.library-cards__account-button:hover, 
+.library-cards__account-button:focus {
     background-color: #BB945F;
     border: 1px solid #BB945F;
     cursor: pointer;
@@ -888,10 +885,10 @@ fieldset.library-cards__card-search-form {
 
 #authorized .user-stats {
     display: flex;
-    width: 100%;
-    height: auto;
     justify-content: center;
     column-gap: 25px;
+    width: 100%;
+    height: auto;
 }
 
 #authorized .user-stats__visits {
@@ -925,12 +922,12 @@ fieldset.library-cards__card-search-form {
 
 #authorized .block-header {
     display: block;
-    color: #000;
-    text-align: center;
+    color: #000000;
     font-family: Inter;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
+    text-align: center;
     line-height: 20px; /* 200% */
     letter-spacing: 0.2px;
     text-transform: capitalize;
@@ -938,39 +935,39 @@ fieldset.library-cards__card-search-form {
 
 #authorized .block-value {
     display: block;
-    color: #000;
-    text-align: center;
+    color: #000000;
     font-family: Inter;
     font-size: 10px;
     font-style: normal;
     font-weight: 400;
+    text-align: center;
     line-height: 20px; /* 200% */
     letter-spacing: 0.2px;
     text-transform: capitalize;
 }
 
 #authorized .user-stats__visits-ico {
+    align-self: center;
     background: url(../images/SVG/visits-icon.svg) no-repeat center;
     background-size: cover;
-    align-self: center;
 }
 
 #authorized .user-stats__bonuses-ico {
+    align-self: center;
     background: url(../images/SVG/bonuses-icon.svg) no-repeat center;
     background-size: cover;
-    align-self: center;
 }
 
 #authorized .user-stats__books-ico {
+    align-self: center;
     background: url(../images/SVG/books-icon.svg) no-repeat center;
     background-size: cover;
-    align-self: center;
 }
 
 /* library cards end */
 /* Footer start */
 footer {
-    color: #FFF;
+    color: #ffffff;
     font-family: Inter;
     font-size: 15px;
     font-style: normal;
@@ -979,12 +976,12 @@ footer {
 }
 
 .footer-wrapper {
-    background-color: #0C0C0E;
     display: block;
     width: 100%;
     height: auto;
     padding-left: 20px;
     padding-right: 20px;
+    background-color: #0C0C0E;
 }
 
 .footer__business-information {
@@ -994,7 +991,7 @@ footer {
     column-gap: 15px;
     padding-top: 20px;
     padding-bottom: 30px;
-    border-bottom: 1px solid #fff ;
+    border-bottom: 1px solid #ffffff ;
 }
 
 .footer__contact-info {
@@ -1003,21 +1000,21 @@ footer {
 }
 
 .footer__contact-info-text {
-    color: #fff ;
+    margin-bottom: 18px;
+    color: #ffffff ;
     text-decoration: none;
-    margin-bottom: 13px;
-
-    transition: .2s all;
+    transition: 0.2s all;
 }
 
-.footer__contact-info-text:hover, .footer__contact-info-text:focus {
-    opacity: .6;
+.footer__contact-info-text:hover, 
+.footer__contact-info-text:focus {
+    opacity: 0.6;
 }
 
 .footer__contact-info-socials {
     display: flex;
     flex-direction: row;
-    column-gap: 5px;
+    column-gap: 15px;
     align-items: start;
 }
 
@@ -1027,32 +1024,33 @@ footer {
 
 .footer__socials {
     display: block;
+    box-sizing: border-box;
     width: 24px;
     height: 24px;
-    box-sizing: content-box;
     padding: 5px;
-    transition: .2s all;
+    transition: 0.2s all;
 }
 
-.footer__socials:hover, .footer__socials:focus{
-    opacity: .6;
+.footer__socials:hover,
+.footer__socials:focus{
+    opacity: 0.6;
     cursor: pointer;
 }
 
 .tweeter {
-    background: url(../images/SVG/u_twitter-alt.svg) no-repeat center;
-    block-size: cover;
     padding-left: 0px;
+    background: url(../images/SVG/u_twitter-alt.svg) no-repeat center;
+    background-size: contain;
 }
 
 .instagram {
     background: url(../images/SVG/u_instagram.svg) no-repeat center;
-    block-size: cover;
+    background-size: contain;
 }
 
 .facebook {
     background: url(../images/SVG/u_facebook-f.svg) no-repeat center;
-    block-size: cover;
+    background-size: contain;
 }
 
 .footer__working-hours-text {
@@ -1069,8 +1067,7 @@ footer {
     flex-direction: row;
     justify-content: space-between;
     padding: 39px 0 39px 0;
-
-    color: #FFF;
+    color: #ffffff;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -1085,9 +1082,9 @@ footer {
 
 .footer__school-name {
     position: absolute;
-    padding: 5px;
     left: 50%;
     transform: translateX(-50%);
+    padding: 5px;
 }
 
 .footer__user-name {
@@ -1095,12 +1092,13 @@ footer {
 }
 
 .footer-link {
-    color: #fff;
+    display: block;
+    color: #ffffff;
     text-decoration: none;
-    transition: .2s all;
+    transition: 0.2s all;
 }
 
 .footer-link:hover {
-    opacity: .6;
+    opacity: 0.6;
 }
 /* footer end */
