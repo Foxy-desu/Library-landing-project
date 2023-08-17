@@ -37,8 +37,18 @@
                             </li>
                         </ul>
                     </nav>    
-                    <div class="header-profile header-item">
-                        <!-- <img class="header-profile__icon" src="./images/SVG/icon_profile.svg" alt="Profile icon"> -->
+                    <div class="header-profile__caption">
+                        <div class="header-profile header-item"></div>
+                        <ul class="header-profile__dropdown-menu">
+                            <li class="header-caption"><h3 class="dropdown-menu__heading">Profile</h3></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Log in</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Register</a></li>
+                        </ul>
+                        <ul class="header-profile__dropdown-menu_auth">
+                            <li class="header-caption"><h3 class="dropdown-menu__heading">Profile</h3></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option">My profile</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Log out</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
@@ -67,8 +77,8 @@
             <div class="about-wrapper">
                 <h2 class="about__title section-title" id="about" >About</h2>
                 <p class="about__desc">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
-                <div class="about__carousel">
-                    <div class="about__carousel-images">
+                <div class="about__carousel slider-js">
+                    <div class="about__carousel-images slider-line-js">
                         <div class="about__carousel-img-container image-1"></div>
                         <div class="about__carousel-img-container image-2"></div>
                         <div class="about__carousel-img-container image-3"></div>
@@ -76,13 +86,13 @@
                         <div class="about__carousel-img-container image-5"></div>
                     </div>
                     <div class="carousel-pagination">
-                        <div class="pagination-element-wrap">
-                            <span class="carousel-pagination-element" data-current="true"></span>
+                        <div class="pagination-element-wrap pagination-1">
+                            <span class="carousel-pagination-element current" ></span>
                         </div>
-                        <div class="pagination-element-wrap">
+                        <div class="pagination-element-wrap pagination-2">
                             <span class="carousel-pagination-element"></span>
                         </div>
-                        <div class="pagination-element-wrap">
+                        <div class="pagination-element-wrap pagination-3">
                             <span class="carousel-pagination-element"></span>
                         </div>
                     </div>
