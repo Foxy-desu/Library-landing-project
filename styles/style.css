@@ -79,13 +79,23 @@ img {
 
 .header-profile__caption:hover .header-profile__dropdown-menu {
     display: flex; 
-    animation: ani 0.5s forwards;
+    animation: ani 0.5s ease forwards;
 }
+
+.header-profile__caption:not(:hover) .header-profile__dropdown-menu {
+    animation: ani2 0.5s ease forwards;
+  }
 
 @keyframes ani {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
+
+@keyframes ani2 {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
 
 .dropdown-menu__heading {
     position: relative;
@@ -576,6 +586,7 @@ ul {
     background-color: transparent;
     border: 1px solid #0C0C0E;
     border-radius: 2px;
+    transition: 0.2s all;
 }
 
 .book-info__buy-button:enabled:hover {
@@ -764,6 +775,11 @@ tbody th {
 
 .contacts__contact-info a {
     color: #BB945F;
+    text-decoration: none;
+}
+
+.contacts__contact-info a:hover {
+    text-decoration: underline;
 }
 
 .title {

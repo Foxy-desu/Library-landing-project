@@ -1,3 +1,5 @@
+(function sliderHandler() {
+
 let offset = 0; //переменная хранит текущее смещение слайдера от левого края
 const sliderLine = document.querySelector('.slider-line-js'); // контейнер с изображениями
 const buttonOne = document.querySelector('.pagination-1'); //1 кнопка пагинации
@@ -49,3 +51,43 @@ buttonThree.addEventListener('click', function(){
         }
     }
 });
+
+}());
+
+(function favoritesPicksHandler() {
+    function showBlockFor(element) {
+        const elementKeyword = element.id.split('-')[1];
+        const blocksArr = document.querySelectorAll('.favorites__books');
+        
+        for(let item of blocksArr) {
+            // console.log(item);
+            if (item.id.includes(elementKeyword)) {
+                selectedBlock = item;
+            }
+        }
+
+        if (window.getComputedStyle(selectedBlock).display === 'none') {
+            selectedBlock.style.display = 'grid';
+            for(let item of blocksArr) {
+               if(!item.id.includes(elementKeyword)) item.style.display = 'none';
+            
+            }
+        }
+        
+    }
+    
+    let selectedRadio;
+    let selectedBlock;
+    const radioParent = document.querySelector('.form-season__inputs');
+
+    radioParent.onclick = function(event) {
+        selectedRadio = event.target;
+        if (selectedRadio.tagName == 'INPUT') {
+            // console.log(selectedRadio);
+            showBlockFor(selectedRadio);
+        }   
+    };
+
+    
+
+})();
