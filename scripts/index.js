@@ -1,56 +1,106 @@
-(function sliderHandler() {
 
-let offset = 0; //переменная хранит текущее смещение слайдера от левого края
-const sliderLine = document.querySelector('.slider-line-js'); // контейнер с изображениями
-const buttonOne = document.querySelector('.pagination-1'); //1 кнопка пагинации
-const buttonTwo = document.querySelector('.pagination-2'); //2 кнопка пагинации
-const buttonThree = document.querySelector('.pagination-3'); //3 кнопка пагинации
+(function sliderHandlerAdaptive () {
+    // находим размеры всех элементов и присваиваем новые в зависимости от ширины блока с каруселью
+        const images = document.querySelectorAll('.about__slider-img');
+        const slider = document.querySelector('.slider-js');
+        const sliderLine = document.querySelector('.slider-line-js');
+        const paginationButtonBlock = document.querySelector('.slider-pagination');
+        const buttonsArray = document.querySelectorAll('.pagination-element-wrap')
+        
+        let width;
+        let columnGap = 25;
+        let itemWidth;
+        let selectedButton;
+        let offset = 0;
+    // настраиваем перелистывание изображений
+        function imagesRoll() {
+            paginationButtonBlock.addEventListener('click', function(event) {
+                selectedButton = event.target.closest('div');
 
-buttonOne.addEventListener('click', function(){
-    offset = 0;
-    sliderLine.style.left = - (offset) + 'px';
+                for (let i = 0; i < 3; i++) {
+                    buttonsArray.forEach((element, index) => {
+                    element.firstElementChild.classList.remove('current');
+                    if (selectedButton == element) {
+                        element.firstElementChild.classList.add('current');
+                        offset = (itemWidth * index)
+                            if (offset != 0) {
+                                offset = (itemWidth * index) + (columnGap * index);
+                            }
+                        sliderLine.style.transform = `translate(${-offset}px)`
+                    }
+                    })
+                }  
+            });
+        }
+        function sliderMouseweel() {
+            slider.addEventListener('wheel', function(event) {
+                const line = event.deltaY;
+                if (line > 0) {
+                    offset = offset + itemWidth + columnGap;
+                    if (offset >= ((itemWidth * 3) + (columnGap * 2))) {
+                        offset = (Number(sliderLine.style.width.slice(0, -2)) - ((itemWidth * 3) + (columnGap * 2)))
+                    };
+
+                }
+                else if (line < 0) {
+                    offset = offset - itemWidth - columnGap;
+                    if (offset < 0) offset = 0;
+                }
+
+                sliderLine.style.transform = `translate(${-offset}px)`;
     
-    if (!buttonOne.firstElementChild.classList.contains('current')) {
-        buttonOne.firstElementChild.classList.add('current');
-        if (buttonTwo.firstElementChild.classList.contains('current')) {
-            buttonTwo.firstElementChild.classList.remove('current');
-        }
-        else {
-            buttonThree.firstElementChild.classList.remove('current');
-        }
-    }
-});
+                // console.log(`Event deltaY: ${event.deltaY}\n Offset: ${ sliderLine.style.transform}\n Item width: ${itemWidth}\n Column gap: ${columnGap}`)
+                event.preventDefault();
 
-buttonTwo.addEventListener('click', function(){
-    offset = 475;
-    sliderLine.style.left = - (offset) + 'px';
+                function buttonsColorChange() {
 
-    if (!buttonTwo.firstElementChild.classList.contains('current')) {
-        buttonTwo.firstElementChild.classList.add('current');
-        if (buttonThree.firstElementChild.classList.contains('current')) {
-            buttonThree.firstElementChild.classList.remove('current');
-        }
-        else {
-            buttonOne.firstElementChild.classList.remove('current');
-        }
-    }
-    
-});
 
-buttonThree.addEventListener('click', function(){
-    offset = (475 * 2);
-    sliderLine.style.left = - (offset) + 'px'
-    
-    if (!buttonThree.firstElementChild.classList.contains('current')) {
-        buttonThree.firstElementChild.classList.add('current');
-        if (buttonOne.firstElementChild.classList.contains('current')) {
-            buttonOne.firstElementChild.classList.remove('current');
-        }
-        else {
-            buttonTwo.firstElementChild.classList.remove('current');
-        }
-    }
-});
+                    if (offset === 0) {
+                        buttonsArray.forEach(element => {
+                            element.firstElementChild.classList.remove('current');
+                        })
+                        document.querySelector('.pagination-1').firstElementChild.classList.add('current');
+                    }
+
+                    else if (offset === (itemWidth + columnGap)) {
+                        buttonsArray.forEach(element => {
+                            element.firstElementChild.classList.remove('current');
+                        })
+                        document.querySelector('.pagination-2').firstElementChild.classList.add('current');
+                    }
+
+                    else if (offset === ((itemWidth + columnGap) * 2)) {
+                        buttonsArray.forEach(element => {
+                            element.firstElementChild.classList.remove('current');
+                        })
+                        document.querySelector('.pagination-3').firstElementChild.classList.add('current');
+                    }
+                };
+
+                buttonsColorChange();
+            });
+        };
+        function init() {
+            console.log('resize');
+            width = slider.offsetWidth;
+            console.log(width);
+            columnGap = Math.round(width * 0.018);
+            itemWidth = ((width - (columnGap * 2)) / 3) // у нас 3 видимых элемента в блоке
+            
+            images.forEach(item => {
+                item.style.width = `${itemWidth}px`
+                item.style.height = 'auto';
+            }) 
+            
+            sliderLine.style.width = `${(itemWidth * images.length) + (columnGap * 4)}px`; // у нас в блоке определенное кол-во изображений шириной, зависящей от ширины блока карусели ОТСТУПЫ НЕ ВХОДЯТ ВАУ
+            sliderLine.style.gap = `${columnGap}px`;
+        };
+
+        window.addEventListener('resize', init);
+        init();
+        imagesRoll();
+        sliderMouseweel();
+
 
 }());
 
@@ -90,5 +140,5 @@ buttonThree.addEventListener('click', function(){
 
     
 
-})();
+}());
 

@@ -350,34 +350,42 @@ ul {
 }
 
 /* slider-js */
-.about__carousel { 
+.about__slider {
+    width: auto; 
     position: relative;
-    display: flex; 
+    /* display: flex;  */
     max-width: calc((450px * 3) + (25px * 2));
-    height: auto;
+    /* height: auto; */
     overflow: hidden;
 }
 
 /* slider-line-js */
-.about__carousel-images {
+.about__slider-images {
     position: relative;
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    /* display: grid; */
+    /* grid-auto-flow: column;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 25px;
     justify-content: space-between;
-    height: 560px ;
+    display: flex;
+    
+    justify-content: space-between;
+    /* height: 560px ; */
+    height: auto;
     width: auto;
     left: 0;
     transition: all ease 1s;
 }
 
-.about__carousel-img-container {
-    height: 560px;
-    width: 450px;
+.about__slider-img {
+    display: block;
+   max-width: 450px;
 }
 
-.image-1 {
+/* .image-1 {
     background: url(../images/image\ 1.jpg), lightgray 50% / cover no-repeat;
 }
 
@@ -395,9 +403,9 @@ ul {
 
 .image-5 {
     background: url(../images/image\ 5.jpg), lightgray 50% / cover no-repeat;
-}
+} */
 
-.carousel-pagination {
+.slider-pagination {
     position: relative;
     left: 50%;
     top: 35px;
@@ -422,7 +430,7 @@ ul {
     cursor: pointer;
 }
 
-.carousel-pagination-element {
+.slider-pagination-element {
     display: inline-block;
     justify-self: center;
     width: 16px;
@@ -432,7 +440,7 @@ ul {
     transition: 0.5s all;
 }
 
-.carousel-pagination-element.current {
+.slider-pagination-element.current {
     background-color: #BB945F;
 }
 
