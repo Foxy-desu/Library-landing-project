@@ -3,7 +3,14 @@
 
 /* Desctop-version */
 html {
+    width: 100%;
+    height: 100%;
     scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    height: 100%;
 }
 
 * {
@@ -139,12 +146,10 @@ img {
     animation: ani 0.5s ease forwards;
 }
 
-
 @keyframes ani {
     0% {opacity: 0;}
     100% {opacity: 1;}
 }
-
 
 .dropdown-menu__heading {
     position: relative;
@@ -254,6 +259,527 @@ ul {
 
 /* header end */
 /* intro start */
+/* POPUP start */
+.popup {
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(85, 71, 61, 0.901);;
+    transition: 0.2s all;
+}
+
+.popup-card {
+    color: #000;
+    text-align: center;
+    font-family: Inter;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+    letter-spacing: 0.3px;
+}
+.popup-button {
+    box-sizing: content-box;
+    padding: 7.5px 19px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #0C0C0E;
+    text-align: center;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 14px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    border: 1px solid #0C0C0E;
+    border-radius: 2px;
+    transition: 0.2s all;
+}
+
+.register-form__button {
+    padding: 7.5px 14.25px;
+}
+
+.popup-button:enabled:hover {
+    background: #BB945F;
+    border: 1px solid #BB945F;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.popup__log-in-card {
+    position: relative;
+    z-index: 11;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 250px;
+    height: fit-content;
+    padding: 20px 25px;
+    background-color: white;
+
+}
+
+.popup__register-card {
+    position: relative;
+    z-index: 11;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 250px;
+    height: fit-content;
+    padding: 20px 25px;
+    background-color: white;
+
+}
+
+.popup-card-header {
+    position: relative;
+    font-family: Forum; 
+    font-size: 20px;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: block;
+    box-sizing: content-box;
+    width: 15px;
+    height: 15px;
+    padding: 10px;
+    /* background-color: #BB945F; */
+
+}
+
+.button-strokes {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.button-strokes::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    position: absolute;
+    display: block;
+    width: 19px;
+    height: 3px;
+    background-color: #0C0C0E;
+    content: '';
+}
+
+.button-strokes::after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+    position: absolute;
+    display: block;
+    width: 19px;
+    height: 3px;
+    background-color: #0C0C0E;
+    content: '';
+}
+
+.log-in-form__wrap, .register-form__wrap {
+    border: none;
+    text-align: left;
+
+}
+
+
+.user-login-input-desc, .user-register-input-desc {
+    display: inline;
+}
+
+.log-in-form__field, .register-form__field {
+    box-sizing: border-box;
+    height: 20px;
+    width: 100%;
+    margin: 10px 0px;
+    padding: 0px 5px;
+    border: 1px solid #BB945F;
+    border-radius: 0;
+
+}
+
+.log-in-form__field:focus-visible, .register-form__field:focus-visible {
+    outline-color: #BB945F;
+    outline-style: solid;
+    outline-width: 1px;
+}
+
+.register-option, .log-in-option {
+    text-shadow: 0px 2px 3px rgba(255, 255, 255, 0.16);
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.register-option__link, .log-in-option__link {
+    color: #000;
+    padding-left: 7px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration-line: underline;
+    transition: 0.2s all;
+}
+
+.register-option__link:hover, .log-in-option__link:hover {
+    color: #BB945F;
+}
+
+/* PROFILE CARD */
+
+.popup__profile-card {
+    position: relative;
+    z-index: 11;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    width: 600px;
+    height: 400px;
+    background: #FFF;
+}
+
+.user-profile-name {
+    flex-basis: 28.35%;
+    background-color: #0C0C0E;
+    padding-top: 116px;
+    padding-bottom: 139px;
+
+    text-align: center;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px; 
+}
+.user-profile-name__wrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-profile-name__avatar {
+    margin: 15px 20px;
+    width: 80px;
+    height: 80px;
+    text-transform: uppercase;
+    color: #BB945F;
+    background-color: #ffffff; 
+}
+
+.user-profile-name__user-name {
+    position: relative;
+    height: 38px;
+    width: 120px;
+    padding: 8px;
+    text-transform: capitalize;
+    background: #ffffff;
+    color: #000000 ;
+}
+
+.user-profile-name__avatar-image {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.user-profile-info {
+    flex-basis: 71.65%;
+    background-color: #FFFFFF;
+}
+
+.user-profile-info__wrap {
+    padding: 31px 20px 40px;
+}
+
+.user-profile-info__heading {
+    margin-bottom: 40px;
+    font-family: Forum;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 0.8px;
+    text-align-last: left;
+    text-transform: uppercase;
+}
+
+.user-profile-info__stats {
+    display: flex;
+    justify-content: start;
+    column-gap: 10px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.user-profile-info__stats .user-stats__visits {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    padding: 0 5px 0 5px;
+
+}
+
+.user-profile-info__stats .user-stats__visits:first-of-type {
+    padding-left: 0;
+}
+
+.user-profile-info__stats .user-stats__bonuses {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    padding: 0 5px 0 5px;
+}
+
+.user-profile-info__stats .user-stats__books {
+    display: flex;
+    flex-direction: column;
+    box-sizing: content-box;
+    padding: 0 5px 0 5px;
+}
+
+.user-profile-info__stats .block-icon {
+    width: 20px;
+    height: 21px;
+    margin: 0;
+    margin-bottom: 11px;
+    padding: 0;
+}
+
+.user-profile-info__stats .block-header {
+    display: block;
+    margin-bottom: 11px;
+    color: #000000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px; /* 200% */
+    letter-spacing: 0.4px;
+    text-transform: capitalize;
+}
+
+.user-profile-info__stats .block-value {
+    display: block;
+    color: #000000;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    text-align: center;
+    line-height: 20px; /* 200% */
+    letter-spacing: 0.2px;
+    text-transform: capitalize;
+}
+
+.user-profile-info__stats .user-stats__visits-ico{
+    align-self: center;
+    background: url(../images/SVG/visits-icon.svg) no-repeat center;
+    background-size: cover;
+}
+
+.user-profile-info__stats .user-stats__bonuses-ico {
+    align-self: center;
+    background: url(../images/SVG/bonuses-icon.svg) no-repeat center;
+    background-size: cover;
+}
+
+.user-profile-info__stats .user-stats__books-ico {
+    align-self: center;
+    background: url(../images/SVG/books-icon.svg) no-repeat center;
+    background-size: cover;
+}
+
+.user-profile-info__rented-books {
+    margin-bottom: 40px;
+    text-align: start;
+}
+
+.rented-books__heading {
+    margin-bottom: 30px;
+    color: #0C0C0E;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: normal;
+}
+
+.rented-books__rented-book-info {
+    margin-left: 26.5px;
+    margin-bottom: 10px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    list-style-type: disc;
+}
+
+.book {
+    padding-left: 2px;
+}
+
+.user-profile-info__card-number {
+    display: flex;
+    justify-content: start;
+    column-gap: 13px;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    text-align: start;
+}
+
+.card-number {
+    color: #BB945F;
+    text-transform: uppercase;
+}
+
+.copy-ico__button {
+    background-color: transparent;
+    border: none;
+    box-sizing: content-box;
+    height: 12px;
+    padding: 5px;
+    transition: 0.2s all;
+    
+}
+
+.copy-ico__button:hover {
+    cursor: pointer;
+    filter: brightness(90%);
+}
+
+.copy-ico__icon {
+    vertical-align: top;
+    width: 12px;
+    height: 12px;
+}
+
+/* LIBRARY CARD PURCHASE */
+
+.popup__buy-card {
+    position: relative;
+    z-index: 11;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+    flex-direction: column;
+    width: 650px;
+    height: fit-content;
+    background-color: #ffffff;
+}
+
+.buy-card-close-wrap {
+    top: 15px;
+    right: 15px;
+}
+
+.buy-card-close::before, .buy-card-close::after {
+    background-color: #ffffff;
+}
+.popup__buy-card-heading {
+    width: 100%;
+    height: 60px;
+    background-color: #0C0C0E;
+}
+
+.buy-card-heading-text {
+    position: relative;
+    margin: 20px;
+    color: #FFF;
+    font-family: Forum;
+    font-size: 40px;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+}
+
+.popup__buy-card-block {
+    display: flex;
+    height: fit-content;
+    column-gap: 40px;
+    padding: 30px 40px 40px;
+
+}
+
+.purchase-form-block__wrap {
+    width: 200px;
+}
+
+.purchase-form-inputs {
+    border: none;
+}
+
+.buy-card-block__inputs-group {
+    text-align: start;
+}
+
+.purchase-input {
+    width: 200px;
+    margin: 10px 0;
+    border: 1px solid #BB945F;
+    padding-left: 5px;
+}
+
+.purchase-input:focus-visible {
+    outline-color: #BB945F;
+    outline-style: solid;
+}
+
+.purchase-form__expiration-code, .purchase-form__cvc {
+    display: inline-block;
+    width: 45px;
+}
+
+.purchase-form__cvc, .purchase-form__location {
+    margin-bottom: 20px;
+}
+
+.buy-card__button {
+    padding: 7.2px 25.9px;
+    margin-top: 0px;
+    margin-bottom: 0;
+    margin-right: 22px;
+}
+
+.buy-card__price {
+    vertical-align: bottom;
+    font-family: Inter;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.purchase-info-block__text {
+    text-align: start;
+    color: #8E8E8E;
+    letter-spacing: 2px;
+}
+
+/* POPUP end */
 .intro__bg {
     position: relative;
     min-height: 100%;
@@ -1177,6 +1703,8 @@ fieldset.library-cards__card-search-form {
     width: 100%;
     height: auto;
 }
+
+                                           
 
 #authorized .user-stats__visits {
     display: flex;
