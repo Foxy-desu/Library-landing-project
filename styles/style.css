@@ -260,12 +260,45 @@ ul {
    color: #BB945F;
 }
 
+.header__burger {
+    display: none;
+    width: 45px;
+    height: 20px;
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.burger__line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: #FFF;
+    position: absolute;
+    left: 0;
+}
+
+.burger__line-first {
+    top: 0;
+}
+
+.burger__line-second {
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.burger__line-third {
+    bottom: 0;
+}
+
+
+
 /* header end */
 /* intro start */
 /* POPUP start */
 .popup {
     position: fixed;
-    z-index: 10;
+    z-index: 12;
     top: 0;
     left: 0;
     display: none; /*flex*/
@@ -1415,9 +1448,16 @@ span.letter-Y {
 }
 
 .contacts__map-wrap {
+    display: flex;
+    width: inherit;
     flex-basis: 50%;
     max-width: 687px;
     overflow: hidden;
+}
+
+.contacts__map {
+    display: flex;
+    width: 100%;
 }
 
 /* contacts end */
@@ -1442,11 +1482,11 @@ span.letter-Y {
 }
 
 .library-cards__card-info-wrapper#non-authorized {
-    display: none;
+    display: flex;
 }
 
 .library-cards__card-info-wrapper#authorized {
-    display: flex;
+    display: none;
 }
 
 .library-cards__form-title {
@@ -1468,6 +1508,7 @@ span.letter-Y {
     background: #ffffff;
     border: 3px solid #BB945F;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin-right: 20px;
 }
 
 .library-cards__card {
@@ -1866,6 +1907,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    column-gap: 129px;
     padding: 39px 0 39px 0;
     color: #ffffff;
     font-family: Inter;
@@ -1902,3 +1944,164 @@ footer {
     opacity: 0.6;
 }
 /* footer end */
+/* MAX VIEW-PORT WIDTH 1235 */
+@media screen and (max-width: 1235px) {
+    .favorites__books {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* MAX VIEW-PORT WIDTH 1080 */
+@media screen and (max-width: 1080px) {
+    
+    .contacts__info-wrap {
+        flex-direction: column;
+        row-gap: 60px;
+    }
+
+    .contacts__map-wrap {
+        align-self: center;
+    }
+}
+
+/* MAX VIEW-PORT WIDTH 1024 */
+
+@media screen and (max-width: 1136px) {
+    .library-cards__card-info-wrapper {
+        flex-direction: column;
+        align-items: center;
+        column-gap: 20px;
+        row-gap: 21px;
+    }
+
+    .library-cards__reader-card-info-title, .library-cards__reader-card-info {
+        text-align: center;
+    }
+
+    .library-cards__account-buttons {
+        justify-content: center;
+    }
+
+    .library-cards__reader-card-info {
+       max-width: 600px; 
+       width: auto;
+    }
+}
+/* MAX VIEW-PORT WIDTH 1024 */
+@media screen and (max-width: 1024px) {
+    .header-menu {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 332px;
+        height: 570px;
+        z-index: 10; 
+        transform: translateX(100%);
+        margin: 0;
+        padding: 100px 107px;
+        background-color: #0C0C0E;
+        transition: .2s all linear;
+    }
+
+    .header-menu__header-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    /* должно появиться у nav при клике на бургер меню */
+    .header-menu-active {
+        transform: translateX(0);
+    }
+
+    .header-profile__caption, .header-profile__caption_auth {
+        z-index: 11;
+    }
+
+    .header__burger {
+        display: block;
+    }
+
+    .header__nav-close {
+        width: 32px;
+        height: 32px;
+        position: absolute;
+        top: 27px;
+        right: 20px;
+        z-index: 11;
+        
+    }
+
+    .header__nav-close-line {
+        display: block;
+        height: 2px;
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+
+    .header__nav-close-line:first-child {
+        transform: rotate(45deg);
+    }
+
+    .header__nav-close-line:last-child {
+        transform: rotate(-45deg);
+    }
+
+
+    /* должен появляться у контейнера с профилем при появлении бургер меню */
+    .header-profile__caption-active {
+        position: fixed;
+        right: 0px;
+    }
+
+    .favorites__books {
+        justify-content: center;
+    }
+
+    .coffee-shop-wrapper {
+        margin-bottom: 60px
+    }
+
+    .cofee-shop__prices-wrap {
+        flex-direction: column;
+        row-gap: 40px;
+    }
+
+    .coffee-shop__price-list:nth-of-type(2) {
+        align-self: end;
+    }
+
+
+    .footer__lesson-provider-info {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .footer__school-name {
+        position: relative;
+        left: 0;
+        transform: none;
+    }
+    
+}
+
+/* MAX VIEW-PORT WIDTH 878 */
+
+@media screen and (max-width: 878px) {
+    .footer__lesson-provider-info {
+        justify-content: flex-end;
+        row-gap: 20px;
+    }
+
+    .footer__year {
+        margin: auto auto auto 0;
+    }
+
+   .footer__user-name {
+    align-self: end;
+   }
+}
