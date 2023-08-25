@@ -9,6 +9,181 @@
     <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
+    <!-- POPUP start -->
+    <div class="popup">
+            <!-- login start -->
+            <div class="popup__log-in-card popup-card">
+                <div class="close-button">
+                    <div class="button-strokes"></div>
+                </div>
+                <h3 class="popup__card-header popup-card-header">Login</h3>
+                <form class="log-in-form" action="#"  name="urer-log-in">
+                    <fieldset class="log-in-form__wrap">
+                        <p class="log-in-form__info">
+                            <label class="user-login-input-desc" for="#user-login">
+                                E-mail or readers card<br>
+                                <input class="log-in-form__field" id="user-login" name="user-login" type="text">
+                            </label>
+                           
+                            <label class="user-login-input-desc" for="#user-password">
+                                Password<br>
+                                <input class="log-in-form__field" id="user-password" name="user-password" type="password">
+                            </label>
+                            <button class="log-in-form__button popup-button" type="submit">Log In</button>
+                            <p class="register-option">Don’t have an account? <a href="#" class="register-option__link">Register</a></p>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- login end -->
+            <!-- register start -->
+            <div class="popup__register-card popup-card">
+                <div class="close-button">
+                    <div class="button-strokes"></div>
+                </div>
+                <h3 class="popup__card-header popup-card-header">Register</h3>
+                <form class="register-form" action="#" name="user-registration">
+                    <fieldset class="register-form__wrap">
+                        <p class="register-form__info">
+                            <label class="user-register-input-desc" for="#register-name">
+                                First name<br>
+                                <input class="register-form__field" id="register-name" name="register-name" type="text">
+                            </label>
+                           
+                            <label class="user-register-input-desc" for="#register-last-name">
+                                Last name<br>
+                                <input class="register-form__field" id="register-last-name" name="register-last-name" type="text">
+                            </label>
+
+                            <label class="user-register-input-desc" for="#register-email">
+                                E-mail<br>
+                                <input class="register-form__field" id="register-email" name="register-email" type="email">
+                            </label>
+
+                            <label class="user-register-input-desc" for="#register-password">
+                                Password<br>
+                                <input class="register-form__field" id="register-password" name="register-password" type="password">
+                            </label>
+                            <button class="register-form__button popup-button" type="submit">Sign Up</button>
+                            <p class="log-in-option">Don’t have an account? <a href="#" class="log-in-option__link">Register</a></p>
+                        </p>
+                    </fieldset>
+                </form>
+            </div>
+            <!-- register-end -->
+            <!-- user profile start -->
+            <div class="popup__profile-card popup-card">
+                <div class="user-profile-name">
+                    <div class="user-profile-name__wrap">
+                        <div class="user-profile-name__avatar">
+                            <div class="user-profile-name__avatar-image">JD</div>
+                        </div>
+                        <div class="user-profile-name__user-name">
+                            John Doe
+                        </div>
+                    </div> 
+                    
+                </div>
+                <div class="user-profile-info">
+                    <div class="close-button">
+                        <div class="button-strokes"></div>
+                    </div>
+                    <div class="user-profile-info__wrap">
+                        <h3 class="user-profile-info__heading">My profile</h3>
+                        <div class=" user-profile-info__stats user-stats">
+                            <div class="user-stats__visits">
+                                <span class="user-stats__visits-header block-header">Visits</span>
+                                <div class="user-stats__visits-ico block-icon"></div>
+                                <span class="user-stats__visits-value block-value">23</span>
+                            </div>
+                            <div class="user-stats__bonuses">
+                                <span class="user-stats__bonuses-header block-header">Bonuses</span>
+                                <div class="user-stats__bonuses-ico block-icon"></div>
+                                <span class="user-stats__bonuses-value block-value">1240</span>
+                            </div>
+                            <div class="user-stats__books">
+                                <span class="user-stats__books-header block-header">Books</span>
+                                <div class="user-stats__books-ico block-icon"></div>
+                                <span class="user-stats__books-value block-value">2</span>
+                            </div>
+                        </div>
+                        <div class="user-profile-info__rented-books">
+                            <h4 class="rented-books__heading">Rented books</h4>
+                            <ul class="rented-books__list">
+                                <li class="rented-books__rented-book-info">
+                                    <p class="book">The Last Queen, Clive Irving</p>
+                                </li>
+                                <li class="rented-books__rented-book-info">
+                                    <p class="book">Dominicana, Angie Cruz</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="user-profile-info__card-number">
+                            <p class="card-mumber__wrap">
+                                <span class="card-number-field">Card number</span> 
+                                <div class="card-number" id="user-card-number">F00234030</div>
+                                <button class="copy-ico__button" id="copy" title="click to copy">
+                                    <img class="copy-ico__icon" src="./images/SVG/icon copy.svg" width="12px" height="12px" alt="''">
+                                </button>
+                            </p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!-- user profile end -->
+            <div class="popup__buy-card popup-card">
+                <div class="close-button buy-card-close-wrap">
+                    <div class="button-strokes buy-card-close"></div>
+                </div>
+                <div class="popup__buy-card-heading">
+                    <h3 class="buy-card-heading-text">Buy a library card</h3>
+                </div>
+                <div class="popup__buy-card-block">
+                    <div class="purchase-form-block__wrap">
+                        <form class="purchase-form" name="purchase-library-card" action="#">
+                            <fieldset class="purchase-form-inputs">
+                                <p class="buy-card-block__inputs-group">
+                                    <label class="input-desc">
+                                        Bank card number<br>
+                                        <input type="text" class="purchase-form__bank-card-number purchase-input">
+                                    </label>
+                                    <label class="input-desc">
+                                        Expiration code<br>
+                                        <input type="text" class="purchase-form__expiration-code purchase-input">
+                                        <input type="text" class="purchase-form__expiration-code purchase-input">
+                                    </label><br>
+                                    <label class="input-desc">
+                                        CVC<br>
+                                        <input type="text" class="purchase-form__cvc purchase-input">
+                                    </label><br>
+                                    <label class="input-desc">
+                                        Cardholder name<br>
+                                        <input type="text" class="purchase-form__card-holder purchase-input">
+                                    </label>
+                                    <label class="input-desc">
+                                        Postal code<br>
+                                        <input type="text" class="purchase-form__postal-code purchase-input">
+                                    </label>
+                                    <label class="input-desc">
+                                        City / Town<br>
+                                        <input type="text" class="purchase-form__location purchase-input">
+                                    </label>
+                                    <button class="buy-card__button popup-button">Buy</button>
+                                    <span class="buy-card__price">$ 25.00</span>
+                                </p>
+                            </fieldset>
+                        </form>
+                    </div>
+                    <div class="purchase-info-block__wrap">
+                        <p class="purchase-info-block__text">
+                            If you live, work, attend school, or pay property taxes in New York State, you can get a $25 digital library card right now using this online form. Visitors to New York State can also use this form to apply for a temporary card.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- POPUP end -->
     <!--header start-->
    <header>
         <div class="header">
@@ -44,6 +219,9 @@
                             <li class="option-caption"><a href="#" class="dropdown-menu__option">Log in</a></li>
                             <li class="option-caption"><a href="#" class="dropdown-menu__option">Register</a></li>
                         </ul>
+                    </div>
+                    <div class="header-profile__caption_auth">
+                        <div class="header-profile_auth header-item_auth">JD</div>
                         <ul class="header-profile__dropdown-menu_auth">
                             <li class="header-caption"><h3 class="dropdown-menu__heading">Profile</h3></li>
                             <li class="option-caption"><a href="#" class="dropdown-menu__option">My profile</a></li>
@@ -77,6 +255,30 @@
             <div class="about-wrapper">
                 <h2 class="about__title section-title" id="about" >About</h2>
                 <p class="about__desc">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
+                <div class="about__slider slider-js">
+                    <div class="about__slider-images slider-line-js">
+                        <img class="about__slider-img image-1" src="./images/image_1.jpg" alt="''">
+                        <img class="about__slider-img image-2" src="./images/image_2.jpg" alt="''">
+                        <img class="about__slider-img image-3" src="./images/image_3.jpg" alt="''">
+                        <img class="about__slider-img image-4" src="./images/image_4.jpg" alt="''">
+                        <img class="about__slider-img image-5" src="./images/image_5.jpg" alt="''">
+                    </div>
+                </div> 
+                <div class="slider-pagination">
+                    <div class="pagination-element-wrap pagination-1">
+                        <span class="slider-pagination-element current" ></span>
+                    </div>
+                    <div class="pagination-element-wrap pagination-2">
+                        <span class="slider-pagination-element"></span>
+                    </div>
+                    <div class="pagination-element-wrap pagination-3">
+                        <span class="slider-pagination-element"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="about-wrapper">
+                <h2 class="about__title section-title" id="about" >About</h2>
+                <p class="about__desc">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
                 <div class="about__carousel slider-js">
                     <div class="about__carousel-images slider-line-js">
                         <div class="about__carousel-img-container image-1"></div>
@@ -97,7 +299,7 @@
                         <span class="carousel-pagination-element"></span>
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </section>
     <!--about section end-->
@@ -534,7 +736,7 @@
                 </div>
                 <div class="library-cards__card-info-wrapper" id="authorized">
                     <div class="library-cards__card-wrapper">
-                        <h3 class="library-cards__form-title">Find your Library card</h3>
+                        <h3 class="library-cards__form-title">Your Library card</h3>
                         <div class="library-cards__form-wrap">
                             <form name="library-card-search" class="library-cards__card">
                                 <fieldset class="library-cards__card-search-form">
@@ -564,7 +766,7 @@
                     </div>
                     <div class="library-cards__reader-card-wrapper">
                         <h3 class="library-cards__reader-card-info-title">Visit your profile</h3>
-                        <p class="library-cards__reader-card-info">With a digital library card you get free access to the Library&apos;s wide array of digital resources including e-books, databases, educational resources, and more.</p>
+                        <p class="library-cards__reader-card-info">With a digital library card you get free access to the Library&#8217;s wide array of digital resources including e-books, databases, educational resources, and more.</p>
                         <div class="library-cards__account-buttons">
                             <button class="library-cards__account-button profile-button">Profile</button>
                         </div>
