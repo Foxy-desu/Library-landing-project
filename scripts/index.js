@@ -117,7 +117,7 @@
         }
 
         if (window.getComputedStyle(selectedBlock).display === 'none') {
-            selectedBlock.style.display = 'grid';
+            selectedBlock.style.display = 'flex';
             for(let item of blocksArr) {
                if(!item.id.includes(elementKeyword)) item.style.display = 'none';
             

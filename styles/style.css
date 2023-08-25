@@ -25,6 +25,9 @@ img {
 }
 
 .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -265,7 +268,7 @@ ul {
     z-index: 10;
     top: 0;
     left: 0;
-    display: none;
+    display: none; /*flex*/
     width: 100%;
     height: 100%;
     background-color: rgba(85, 71, 61, 0.901);;
@@ -318,12 +321,12 @@ ul {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
+    display: none;     /*flex*/
+    flex-direction: column;  
     width: 250px;
     height: fit-content;
     padding: 20px 25px;
     background-color: white;
-
 }
 
 .popup__register-card {
@@ -332,7 +335,8 @@ ul {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
+    display: none;     /*flex*/
+    flex-direction: column;  
     width: 250px;
     height: fit-content;
     padding: 20px 25px;
@@ -358,7 +362,6 @@ ul {
     width: 15px;
     height: 15px;
     padding: 10px;
-    /* background-color: #BB945F; */
 
 }
 
@@ -450,19 +453,20 @@ ul {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
+    display: none;  /* flex*/
+    flex-direction: row;
     width: 600px;
     height: 400px;
     background: #FFF;
 }
 
 .user-profile-name {
+    display: flex;
+    justify-content: center;
     flex-basis: 28.35%;
     background-color: #0C0C0E;
     padding-top: 116px;
     padding-bottom: 139px;
-
-    text-align: center;
     font-family: Inter;
     font-size: 20px;
     font-style: normal;
@@ -685,7 +689,7 @@ ul {
     top: 20%;
     left: 50%;
     transform: translateX(-50%);
-    display: none;
+    display: none; /*flex*/
     flex-direction: column;
     width: 650px;
     height: fit-content;
@@ -828,7 +832,7 @@ ul {
 .about-wrapper {
     display: block;
     max-width: 100%;
-    height: 817px;
+    /* height: 817px; */
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 20px;
@@ -879,9 +883,7 @@ ul {
 .about__slider {
     width: auto; 
     position: relative;
-    /* display: flex;  */
     max-width: calc((450px * 3) + (25px * 2));
-    /* height: auto; */
     overflow: hidden;
 }
 
@@ -891,15 +893,6 @@ ul {
     display: flex;
     justify-content: space-between;
     gap: 25px;
-    /* display: grid; */
-    /* grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    gap: 25px;
-    justify-content: space-between;
-    display: flex;
-    
-    justify-content: space-between;
-    /* height: 560px ; */
     height: auto;
     width: auto;
     left: 0;
@@ -908,28 +901,8 @@ ul {
 
 .about__slider-img {
     display: block;
-   max-width: 450px;
+    max-width: 450px;
 }
-
-/* .image-1 {
-    background: url(../images/image\ 1.jpg), lightgray 50% / cover no-repeat;
-}
-
-.image-2 {
-    background: url(../images/image\ 2.jpg), lightgray 50% / cover no-repeat;
-}
-
-.image-3 {
-    background: url(../images/image\ 3.jpg), lightgray 50% / cover no-repeat;
-}
-
-.image-4 {
-    background: url(../images/image\ 4.jpg), lightgray 50% / cover no-repeat;
-}
-
-.image-5 {
-    background: url(../images/image\ 5.jpg), lightgray 50% / cover no-repeat;
-} */
 
 .slider-pagination {
     position: relative;
@@ -942,6 +915,7 @@ ul {
     column-gap: 0px;
     justify-content: center;
     align-items: center;
+    margin-bottom: 60px;
     width: 78px;
     height: 26px;
 }
@@ -975,7 +949,7 @@ ul {
 .favorites-wrapper {
     display: block;
     max-width: 100%;
-    height: auto;
+    /* height: auto; */
     padding-left: 20px;
     padding-right: 20px;
     margin-bottom: 60px;;
@@ -1058,7 +1032,8 @@ ul {
 }
 
 .favorites__books {
-    display: grid;
+    display: flex;
+    flex-wrap: wrap;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     column-gap: 40px;
@@ -1066,11 +1041,10 @@ ul {
     justify-content: space-between;
     padding-right: 40px;
     width: 100%;
-    height: 1150px;
 }
 
 .favorites__books#winter-picks {
-    display: grid;
+    display: flex;
 }
 
 .favorites__books#spring-picks {
@@ -1217,10 +1191,10 @@ span.book-info__author {
 .coffee-shop-wrapper {
     display: block;
     max-width: 100%;
-    height: 821px;
+    height: auto;
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 .coffee-shop__title {
@@ -1264,10 +1238,12 @@ span.letter-Y {
 }
 
 .cofee-shop__prices-wrap {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
-    height: 520px;
+    column-gap: 70px;
+    height: auto;
 }
 
 .coffee-shop__price-list {
@@ -1364,23 +1340,25 @@ span.letter-Y {
 .contacts-wrapper {
     display: block;
     max-width: 100%;
-    height: 555px;
+    /* height: 555px; */
     padding-left: 20px;
     padding-right: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 60px;
 }
 
 .contacts__info-wrap {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     width: 100%;
-    height: 414px;
 }
 
 .contacts__contact-info {
-    flex-basis: 503px;
+    /* flex-basis: 503px; */
     height: 100%;
+    margin-right: 15px;
+    margin-bottom: calc(419px - 380px);
 }
 
 .contact-info__telephone.text {
@@ -1439,7 +1417,6 @@ span.letter-Y {
 .contacts__map-wrap {
     flex-basis: 50%;
     max-width: 687px;
-    height: 100%;
     overflow: hidden;
 }
 
@@ -1454,9 +1431,12 @@ span.letter-Y {
 }
 
 .library-cards__card-info-wrapper {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
+    column-gap: 20px;
+    row-gap: 35px;
     width: 100%;
     padding-bottom: 40px;
 }
@@ -1466,7 +1446,7 @@ span.letter-Y {
 }
 
 .library-cards__card-info-wrapper#authorized {
-    display: grid;
+    display: flex;
 }
 
 .library-cards__form-title {
