@@ -977,6 +977,10 @@ ul {
     background-color: #BB945F;
 }
 
+.mobile-slider__wrap {
+    display: none;
+}
+
 /* about end */
 /* faforites section start */
 .favorites-wrapper {
@@ -2104,4 +2108,163 @@ footer {
    .footer__user-name {
     align-self: end;
    }
+}
+
+@media screen and (max-width: 768px) {
+    
+    .about__slider, .slider-pagination {
+        display: none;
+    }
+
+    .mobile-slider__wrap {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        column-gap: 25px;
+        width: auto;
+        height: auto;
+        max-width: 614px;
+        max-height: 601px;
+        margin: 0 51px;
+        overflow: hidden;
+        margin-bottom: 40px;
+    }
+
+    .slider__photo-block {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        column-gap: 13%;
+    }
+
+    
+
+    .slider-button {
+        position: relative;
+        box-sizing: content-box;
+        width: 24px;
+        height: 24px;
+        background-color: transparent;
+        border: none;
+
+    }
+
+    .slider-button__wrapper-left {
+        box-sizing: content-box;
+        width: 24px;
+        height: 24px;
+        padding: 15px 15px 15px 0;
+    }
+    
+    .mobile-slider-left {
+        background: url(../images/SVG/Carret_Left.svg) no-repeat center;
+        background-size: cover;
+    }
+
+    
+    .slider-button__wrapper-right {
+        box-sizing: content-box;
+        width: 24px;
+        height: 24px;
+        padding: 15px 0 15px 15px;
+    }
+
+    .mobile-slider-right {
+        background: url(../images/SVG/Carret_Right.svg) no-repeat center;
+        background-size: cover;
+    }
+
+    .slider-button__wrapper-left:hover, 
+    .mobile-slider-left:hover, 
+    .slider-button__wrapper-right:hover, 
+    .mobile-slider-right:hover {
+        cursor: pointer;
+    }
+
+    .slider-button__wrapper-left:hover .mobile-slider-left {
+        left: -2px;
+    }
+
+    .slider-button__wrapper-right:hover .mobile-slider-right {
+        right: -2px;
+    }
+
+
+
+    .about__slider_mob {
+        overflow: hidden;
+        width: auto;
+        max-width: 450px;
+    }
+
+
+
+    .about__slider-images_mob {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        height: auto;
+        width: auto;
+        left: 0;
+        transition: all ease 1s;
+    }
+
+    .about__slider-img_mob {
+        display: block;
+        max-width: 450px;
+    }
+
+    .slider__pagination-block {
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        height: 40px;
+
+    }
+
+    .slider-pagination_mob {
+        position: relative;
+        left: 50%;
+        top: 0; 
+        transform: translateX(-50%);
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-columns: repeat(3, 26px);
+        column-gap: 0px;
+        justify-content: center;
+        align-items: center;
+        width: 78px;
+        height: 26px;
+    }
+
+    .pagination-element-wrap_mob {
+        width: 26px;
+        height: 21px;
+        padding: 5px 5px 0;
+    }
+
+    .pagination-element-wrap_mob:hover {
+        cursor: pointer;
+    }
+
+    .slider-pagination-element_mob {
+        display: inline-block;
+        justify-self: center;
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #000000; 
+        transition: 0.5s all;
+    }
+
+    .current_mob {
+        background-color: #BB945F;
+    }
+
+
+
+
+
 }
