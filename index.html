@@ -65,7 +65,7 @@
                                 <input class="register-form__field" id="register-password" name="register-password" type="password">
                             </label>
                             <button class="register-form__button popup-button" type="submit">Sign Up</button>
-                            <p class="log-in-option">Don’t have an account? <a href="#" class="log-in-option__link">Register</a></p>
+                            <p class="log-in-option">Already have an account? <a href="#" class="log-in-option__link">Log In</a></p>
                         </p>
                     </fieldset>
                 </form>
@@ -73,6 +73,9 @@
             <!-- register-end -->
             <!-- user profile start -->
             <div class="popup__profile-card popup-card">
+                <div class="close-button">
+                    <div class="button-strokes"></div>
+                </div>
                 <div class="user-profile-name">
                     <div class="user-profile-name__wrap">
                         <div class="user-profile-name__avatar">
@@ -85,9 +88,9 @@
                     
                 </div>
                 <div class="user-profile-info">
-                    <div class="close-button">
+                    <!-- <div class="close-button">
                         <div class="button-strokes"></div>
-                    </div>
+                    </div> -->
                     <div class="user-profile-info__wrap">
                         <h3 class="user-profile-info__heading">My profile</h3>
                         <div class=" user-profile-info__stats user-stats">
@@ -132,6 +135,7 @@
                 </div>
             </div>
             <!-- user profile end -->
+            <!-- buy card start -->
             <div class="popup__buy-card popup-card">
                 <div class="close-button buy-card-close-wrap">
                     <div class="button-strokes buy-card-close"></div>
@@ -222,16 +226,16 @@
                         <div class="header-profile header-item"></div>
                         <ul class="header-profile__dropdown-menu">
                             <li class="header-caption"><h3 class="dropdown-menu__heading">Profile</h3></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Log in</a></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Register</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option log-in-option">Log in</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option register-option">Register</a></li>
                         </ul>
                     </div>
                     <div class="header-profile__caption_auth">
                         <div class="header-profile_auth header-item_auth">JD</div>
                         <ul class="header-profile__dropdown-menu_auth">
                             <li class="header-caption"><h3 class="dropdown-menu__heading">Profile</h3></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">My profile</a></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Log out</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option my-profile-option">My profile</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option log-out-option">Log out</a></li>
                         </ul>
                     </div>
                     <div class="header__burger burger">

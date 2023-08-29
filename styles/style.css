@@ -57,13 +57,13 @@ img {
 
 .header-profile__caption {
     position: relative;
-    display: none;
+    display: block;
 
 }
 
 .header-profile__caption_auth {
     position: relative;
-    display: block;
+    display: none;
 }
 
 .header-profile {

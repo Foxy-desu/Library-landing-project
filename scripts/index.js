@@ -275,3 +275,233 @@
         scrollOnButtonTap();
 
 })();
+
+(function burgerHandler(){
+    const burgerButton = document.querySelector('.header__burger');
+    const burgerMenu = document.querySelector('.header-menu');
+    const burgerClsoseButton = document.querySelector('.header__nav-close');
+    const burgerMenuArray = document.querySelectorAll('.header-menu__option');
+
+    // open burger menu
+    burgerButton.addEventListener('click', ()=> {
+        burgerMenu.classList.add('header-menu-active');
+    })
+
+    // close burger menu by clicking on close button
+    burgerClsoseButton.addEventListener('click', ()=> {
+        burgerMenu.classList.remove('header-menu-active');
+    })
+
+    // close burger menu after clicking menu option
+    burgerMenuArray.forEach(element => {
+        element.addEventListener('click', ()=> {
+            burgerMenu.classList.remove('header-menu-active');
+        })
+    })
+
+    // close burger menu by clicking anywhere but the menu block
+    window.addEventListener ('click', (event)=> {
+        if(burgerMenu.classList.contains('header-menu-active') && 
+        event.target !== burgerButton &&
+        event.target !== burgerMenu) {
+            burgerMenu.classList.remove('header-menu-active');
+        }
+    }, true)
+})();
+
+(function profileButtonHandler() {
+    // popup blocks
+    const semiTransparentScreen = document.querySelector('.popup');
+    const logInPopup = document.querySelector('.popup__log-in-card');
+    const registerPopup = document.querySelector('.popup__register-card');
+    const userProfilePopup = document.querySelector('.popup__profile-card');
+    const buyCardPopup = document.querySelector('.popup__buy-card');
+
+    const popupCloseButtons = document.querySelectorAll('.close-button');
+
+    // blocks hich depend on authorisation
+
+
+
+    const findYourLibraryCard = document.getElementById('non-authorized');
+    const yourLibraryCard = document.getElementById('authorized');
+
+    // profile dropdown menu
+    const openNonAuthMenu = document.querySelector('.header-profile__caption');
+    const nonAuthProfile = document.querySelector('.header-profile__dropdown-menu');
+    const logInButton = document.querySelector('.dropdown-menu__option.log-in-option');
+    const logInFormButton = document.querySelector('.log-in-form__button')
+    const registerButton = document.querySelector('.dropdown-menu__option.register-option');
+    const registerFromLogIn = document.querySelector('.log-in-form__wrap .register-option__link')
+    const logInFromRegister = document.querySelector('.register-form__wrap .log-in-option')
+    const registerFormButton = document.querySelector('.register-form__button');
+    const libraryCardSignUp = document.querySelector('.library-cards__account-button.sign-up-button');
+    const libraryCardLogIn = document.querySelector('.library-cards__account-button.log-in-button');
+
+    const openAuthMenu = document.querySelector('.header-profile__caption_auth');
+    const authProfile = document.querySelector('.header-profile__dropdown-menu_auth');
+    const myProfileButton = document.querySelector('.my-profile-option');
+    const logOutButton = document.querySelector('.log-out-option');
+    const libraryCardProfButton = document.querySelector('.library-cards__account-button.profile-button')
+
+    const bookBuyButton = document.querySelectorAll('.book-info__buy-button');
+
+    // actions handler
+
+    function favBooksBuyCheck() {
+        if (openAuthMenu.style.display === 'block') {
+            bookBuyButton.forEach((element) => {
+                if (element.hasAttribute('data-isown')) {
+                    element.setAttribute('data-isown', 'true')
+                    element.textContent = 'Own';
+                }
+            })
+        }
+
+        else { bookBuyButton.forEach((element) => {
+            if (element.hasAttribute('data-isown')) {
+                element.setAttribute('data-isown', 'false');
+                element.textContent = 'Buy';
+            }
+        })
+
+        }
+    };
+
+    favBooksBuyCheck();
+    window.addEventListener('click', favBooksBuyCheck);
+    
+
+    popupCloseButtons.forEach(element => {
+        element.addEventListener('click', ()=> {
+            element.parentElement.style.display = 'none';
+            semiTransparentScreen.style.display = 'none';    
+        });
+    });
+
+    openAuthMenu.addEventListener ('click', ()=> {
+        if (semiTransparentScreen.style.display === 'none') {
+            authProfile.style.display = 'block';
+        }
+    });
+
+    myProfileButton.addEventListener('click', () => {
+        semiTransparentScreen.style.display = 'flex';
+        userProfilePopup.style.display = 'flex';
+        authProfile.style.display = 'none';
+    });
+
+    libraryCardProfButton.addEventListener('click', () => {
+        semiTransparentScreen.style.display = 'flex';
+        userProfilePopup.style.display = 'flex';
+        authProfile.style.display = 'none';
+        registerPopup.style.display = 'none';
+    });
+
+    libraryCardSignUp.addEventListener('click', () => {
+        semiTransparentScreen.style.display = 'flex';
+        registerPopup.style.display = 'flex';
+        nonAuthProfile.style.display = 'none';
+    });
+
+    libraryCardLogIn.addEventListener('click', () => {
+        semiTransparentScreen.style.display = 'flex';
+        logInPopup.style.display = 'flex';
+        nonAuthProfile.style.display = 'none';
+    });
+
+    logOutButton.addEventListener('click', () => {
+        openAuthMenu.style.display = 'none';
+        openNonAuthMenu.style.display = 'block';
+        yourLibraryCard.style.display = 'none';
+        findYourLibraryCard.style.display = 'flex';
+    });
+
+    openNonAuthMenu.addEventListener ('click', ()=> {
+        if (semiTransparentScreen.style.display === 'none') {
+            nonAuthProfile.style.display = 'block';
+        }
+    });
+
+    logInButton.addEventListener('click', () => {
+        semiTransparentScreen.style.display = 'flex';
+        logInPopup.style.display = 'flex';
+        nonAuthProfile.style.display = 'none';
+    });
+
+    logInFormButton.addEventListener('click', () => {
+        openNonAuthMenu.style.display = 'none';
+        openAuthMenu.style.display = 'block';
+        findYourLibraryCard.style.display = 'none';
+        yourLibraryCard.style.display = 'flex';
+        semiTransparentScreen.style.display = 'none';
+        logInPopup.style.display = 'none';
+
+    });
+
+    registerFromLogIn.addEventListener('click', () => {
+        // semiTransparentScreen.style.display = 'flex';
+        logInPopup.style.display = 'none';
+        registerPopup.style.display = 'flex';
+
+    });
+
+    registerButton.addEventListener('click', () => {
+        semiTransparentScreen.style.display = 'flex';
+        registerPopup.style.display = 'flex';
+        nonAuthProfile.style.display = 'none';
+    });
+
+    registerFormButton.addEventListener('click', () => {
+        openNonAuthMenu.style.display = 'none';
+        openAuthMenu.style.display = 'block';
+        findYourLibraryCard.style.display = 'none';
+        yourLibraryCard.style.display = 'flex';
+        semiTransparentScreen.style.display = 'none';
+        logInPopup.style.display = 'none';
+
+    });
+
+    logInFromRegister.addEventListener('click', () => {
+        // semiTransparentScreen.style.display = 'flex';
+        registerPopup.style.display = 'none';
+        logInPopup.style.display = 'flex';
+
+    });
+
+    
+
+
+
+
+        
+
+
+
+})();
+
+(function copyCardNumber(){
+    const cardNumberOutput = document.querySelector('#user-card-number');
+    const copyButton = document.querySelector('.copy-ico__button');
+
+    // copyButton.addEventListener('click', ()=> {
+    //     const range = document.createRange();
+    //     range.selectNode(cardNumberOutput);
+    //     window.getSelection().removeAllRanges();
+    //     window.getSelection().addRange(range);
+    //     document.execCommand("copy");
+    //     window.getSelection().removeAllRanges();
+    // });
+    
+
+    Navigator.clipboard.writeText(cardNumberOutput.innerText).then(function() {
+            console.log('Text copied to clipboard');
+        }).catch(function(error) {
+            console.error('Error:', error);
+        });
+    
+    
+    
+        
+} 
+)(); 
