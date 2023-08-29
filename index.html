@@ -65,7 +65,7 @@
                                 <input class="register-form__field" id="register-password" name="register-password" type="password">
                             </label>
                             <button class="register-form__button popup-button" type="submit">Sign Up</button>
-                            <p class="log-in-option">Don’t have an account? <a href="#" class="log-in-option__link">Register</a></p>
+                            <p class="log-in-option">Already have an account? <a href="#" class="log-in-option__link">Log In</a></p>
                         </p>
                     </fieldset>
                 </form>
@@ -73,6 +73,9 @@
             <!-- register-end -->
             <!-- user profile start -->
             <div class="popup__profile-card popup-card">
+                <div class="close-button">
+                    <div class="button-strokes"></div>
+                </div>
                 <div class="user-profile-name">
                     <div class="user-profile-name__wrap">
                         <div class="user-profile-name__avatar">
@@ -85,9 +88,9 @@
                     
                 </div>
                 <div class="user-profile-info">
-                    <div class="close-button">
+                    <!-- <div class="close-button">
                         <div class="button-strokes"></div>
-                    </div>
+                    </div> -->
                     <div class="user-profile-info__wrap">
                         <h3 class="user-profile-info__heading">My profile</h3>
                         <div class=" user-profile-info__stats user-stats">
@@ -132,6 +135,7 @@
                 </div>
             </div>
             <!-- user profile end -->
+            <!-- buy card start -->
             <div class="popup__buy-card popup-card">
                 <div class="close-button buy-card-close-wrap">
                     <div class="button-strokes buy-card-close"></div>
@@ -194,6 +198,11 @@
                         <h1 class="header-title__text">Brooklyn Public Library</h1>
                     </div>
                     <nav class="header-menu header-item">
+                        <div class="header__nav-close">
+                            <span class="header__nav-close-line"></span>
+                            <span class="header__nav-close-line"></span>
+                        </div>
+                       
                         <ul class="header-menu__header-list">
                             <li class="header-menu__option">
                                 <a class="header-menu__link about-option" href="#about" >About</a>
@@ -211,22 +220,28 @@
                                 <a class="header-menu__link card-option" href="#library-card" >Library Card</a>
                             </li>
                         </ul>
+                        
                     </nav>    
                     <div class="header-profile__caption">
                         <div class="header-profile header-item"></div>
                         <ul class="header-profile__dropdown-menu">
                             <li class="header-caption"><h3 class="dropdown-menu__heading">Profile</h3></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Log in</a></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Register</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option log-in-option">Log in</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option register-option">Register</a></li>
                         </ul>
                     </div>
                     <div class="header-profile__caption_auth">
                         <div class="header-profile_auth header-item_auth">JD</div>
                         <ul class="header-profile__dropdown-menu_auth">
                             <li class="header-caption"><h3 class="dropdown-menu__heading">Profile</h3></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">My profile</a></li>
-                            <li class="option-caption"><a href="#" class="dropdown-menu__option">Log out</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option my-profile-option">My profile</a></li>
+                            <li class="option-caption"><a href="#" class="dropdown-menu__option log-out-option">Log out</a></li>
                         </ul>
+                    </div>
+                    <div class="header__burger burger">
+                        <span class="burger__line burger__line-first"></span>
+                        <span class="burger__line burger__line-second"></span>
+                        <span class="burger__line burger__line-third"></span>
                     </div>
                 </div>
             </div>
@@ -275,31 +290,51 @@
                         <span class="slider-pagination-element"></span>
                     </div>
                 </div>
-            </div>
-            <!-- <div class="about-wrapper">
-                <h2 class="about__title section-title" id="about" >About</h2>
-                <p class="about__desc">The Brooklyn Library is a free workspace, a large number of books and a cozy coffee shop inside </p>
-                <div class="about__carousel slider-js">
-                    <div class="about__carousel-images slider-line-js">
-                        <div class="about__carousel-img-container image-1"></div>
-                        <div class="about__carousel-img-container image-2"></div>
-                        <div class="about__carousel-img-container image-3"></div>
-                        <div class="about__carousel-img-container image-4"></div>
-                        <div class="about__carousel-img-container image-5"></div>
+
+                <!-- 768px viewport slider -->
+
+                <div class="mobile-slider__wrap">
+
+                    <div class="slider__photo-block">
+                        <div class="slider-button__wrapper-left">
+                            <button class="mobile-slider-left slider-button"></button>
+                        </div>
+                        <div class="about__slider_mob">
+                            <div class="about__slider-images_mob">
+                                <img class="about__slider-img_mob image-1_mob" src="./images/image_1.jpg" alt="''">
+                                <img class="about__slider-img_mob image-2_mob" src="./images/image_2.jpg" alt="''">
+                                <img class="about__slider-img_mob image-3_mob" src="./images/image_3.jpg" alt="''">
+                                <img class="about__slider-img_mob image-4_mob" src="./images/image_4.jpg" alt="''">
+                                <img class="about__slider-img_mob image-5_mob" src="./images/image_5.jpg" alt="''">
+                            </div>
+                        </div>
+                        <div class="slider-button__wrapper-right">
+                            <button class="mobile-slider-right slider-button"></button>
+                        </div>
+                    </div>
+                    
+                    <div class="slider__pagination-block">
+                        <div class="slider-pagination_mob">
+                            <div class="pagination-element-wrap_mob pagination-1_mob">
+                                <span class="slider-pagination-element_mob current_mob" ></span>
+                            </div>
+                            <div class="pagination-element-wrap_mob pagination-2_mob">
+                                <span class="slider-pagination-element_mob"></span>
+                            </div>
+                            <div class="pagination-element-wrap_mob pagination-3_mob">
+                                <span class="slider-pagination-element_mob"></span>
+                            </div>
+                            <div class="pagination-element-wrap_mob pagination-4_mob">
+                                <span class="slider-pagination-element_mob"></span>
+                            </div>
+                            <div class="pagination-element-wrap_mob pagination-5_mob">
+                                <span class="slider-pagination-element_mob"></span>
+                            </div>
+                        </div>
                     </div>
                 </div> 
-                <div class="carousel-pagination">
-                    <div class="pagination-element-wrap pagination-1">
-                        <span class="carousel-pagination-element current" ></span>
-                    </div>
-                    <div class="pagination-element-wrap pagination-2">
-                        <span class="carousel-pagination-element"></span>
-                    </div>
-                    <div class="pagination-element-wrap pagination-3">
-                        <span class="carousel-pagination-element"></span>
-                    </div>
-                </div>
-            </div> -->
+                
+            </div>
         </div>
     </section>
     <!--about section end-->
