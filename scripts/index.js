@@ -102,7 +102,7 @@
         sliderMouseweel();
 
 
-}());
+})();
 
 (function favoritesPicksHandler() {
     function showBlockFor(element) {
@@ -140,7 +140,7 @@
 
     
 
-}());
+})();
 
 (function sliderMobile() {
      // находим размеры всех элементов и присваиваем новые в зависимости от ширины блока с каруселью
@@ -484,24 +484,11 @@
     const cardNumberOutput = document.querySelector('#user-card-number');
     const copyButton = document.querySelector('.copy-ico__button');
 
-    // copyButton.addEventListener('click', ()=> {
-    //     const range = document.createRange();
-    //     range.selectNode(cardNumberOutput);
-    //     window.getSelection().removeAllRanges();
-    //     window.getSelection().addRange(range);
-    //     document.execCommand("copy");
-    //     window.getSelection().removeAllRanges();
-    // });
-    
-
     Navigator.clipboard.writeText(cardNumberOutput.innerText).then(function() {
             console.log('Text copied to clipboard');
         }).catch(function(error) {
             console.error('Error:', error);
         });
-    
-    
-    
         
 } 
 )(); 
